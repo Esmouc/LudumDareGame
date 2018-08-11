@@ -21,11 +21,6 @@ public class Shield : MonoBehaviour {
 
 		go.GetComponent<Bullet> ().direction = transform.up;
 
-		go.transform.parent = this.gameObject.transform.parent;
-
-		if (col.gameObject.tag == "Bullet")
-			Destroy (col.gameObject);
-
 		if (shieldResistance == 0)
 			Destroy (this.gameObject);
 		

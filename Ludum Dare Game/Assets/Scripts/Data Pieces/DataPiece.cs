@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour {
+public class DataPiece : MonoBehaviour {
 
 	public float speed;
-
-	public Vector2 direction;
 
 	private Rigidbody2D rb2d;
 
@@ -15,14 +13,16 @@ public class Bullet : MonoBehaviour {
 
 		rb2d = GetComponent<Rigidbody2D> ();
 
-		rb2d.velocity = direction * speed * Time.deltaTime;
+		rb2d.velocity = Vector2.down * speed * Time.deltaTime;
 		
 	}
 
+
 	void OnCollisionEnter2D (Collision2D col){
 
-		Destroy (this.gameObject);
-
+		if (col.gameObject.tag == "DataPiece") {
+			rb2d.velocity = Vector2.zero;
+		}
 	}
 
 }
