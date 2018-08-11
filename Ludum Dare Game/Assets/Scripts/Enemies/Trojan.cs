@@ -44,6 +44,7 @@ public class Trojan : Enemy {
 	void OnCollisionEnter2D (Collision2D col){
 
 		if (col.gameObject.tag == "DataPiece" && col.gameObject.GetComponent<Rigidbody2D>().bodyType == RigidbodyType2D.Static) {
+			GameManager.instance.corruption_level += corruptionLevel;
 			rb2d.bodyType = RigidbodyType2D.Static;
 		}
 

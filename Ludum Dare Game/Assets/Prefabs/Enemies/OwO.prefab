@@ -115,6 +115,7 @@ MonoBehaviour:
   dormant: 0
   head: 1
   body_sprite: {fileID: 21300010, guid: a9e21ae152fe5504287e5b588c12ff4c, type: 3}
+  Bullet: {fileID: 1238999816948594, guid: 0a00296cf1505ca42bebb4ed3acd57d5, type: 2}
 --- !u!212 &212833264969905664
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -149,7 +150,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300002, guid: a9e21ae152fe5504287e5b588c12ff4c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -308,7 +308,7 @@ MonoBehaviour:
   AudioManager: {fileID: 0}
   game_state: 0
   corruption_level: 0
-  corruption_limit: 0
+  corruption_limit: 1000
   corrupted_data: 0
   chance_of_glitching: 0
   free_memory_chance: 0

@@ -15,6 +15,8 @@ public class Centipede : Enemy {
   private Rigidbody2D rb;
   public Sprite body_sprite;
 
+	public GameObject Bullet;
+
 
 
 	// Use this for initialization
@@ -59,12 +61,21 @@ public class Centipede : Enemy {
 	void OnCollisionEnter2D (Collision2D col){
 		
 		if (col.gameObject.tag == "DataPiece" && col.gameObject.GetComponent<Rigidbody2D>().bodyType == RigidbodyType2D.Static) {
-			//TODO
+			GameManager.instance.corruption_level += corruptionLevel;
 		}
 
 		if (col.gameObject.tag == "Bullet") {
 			lives--;
 			if (lives == 0) {
+				for (int i = 0; i < 10; i++){
+					
+					GameObject go = (GameObject)Instantiate (Bullet, transform.position, Quaternion.identity);
+					go.transform.Rotate (new Vector3 (0, 0, 36) * i);
+					go.GetComponent<Bullet> ().direction = go.transform.up;
+					go.transform.position += go.transform.up / 3;
+					go.GetComponent<Bullet> ().UpdateVelocity ();
+
+				}
 				Destroy (gameObject);
 			}
 		}

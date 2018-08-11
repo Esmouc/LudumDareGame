@@ -26,8 +26,12 @@ public class Spyware : Enemy {
 
 		lives--;
 
-		if (lives == 0 || col.gameObject.tag == "DataPiece")
+		if (lives == 0 )
 			Destroy (this.gameObject);
-
+		
+		if ((col.gameObject.tag == "DataPiece" && col.gameObject.GetComponent<Rigidbody2D> ().bodyType == RigidbodyType2D.Static)){
+			GameManager.instance.corruption_level += corruptionLevel;
+			Destroy (this.gameObject);
+		}
 	}
 }
