@@ -17,9 +17,13 @@ public class Shield : MonoBehaviour {
 		
 		shieldResistance--;
 
-		GameObject go = (GameObject) Instantiate (Bullet, transform.position + transform.up * 1/6, Quaternion.identity);
+		if (col.gameObject.tag == "Bullet") {
+			
+			GameObject go = (GameObject)Instantiate (Bullet, transform.position + transform.up * 1 / 6, Quaternion.identity);
+			go.GetComponent<Bullet> ().direction = transform.up;
+			go.GetComponent<Bullet> ().UpdateVelocity ();
 
-		go.GetComponent<Bullet> ().direction = transform.up;
+		}
 
 		if (shieldResistance == 0)
 			Destroy (this.gameObject);

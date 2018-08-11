@@ -8,20 +8,30 @@ public class DataPiece : MonoBehaviour {
 
 	private Rigidbody2D rb2d;
 
+	private bool collided = false;
+
 	// Use this for initialization
 	void Start () {
 
 		rb2d = GetComponent<Rigidbody2D> ();
 
-		rb2d.velocity = Vector2.down * speed * Time.deltaTime;
+		//rb2d.velocity = Vector2.down * speed * Time.deltaTime;
 		
+	}
+
+	void Update () {
+
+		if (collided)
+			if (rb2d.velocity.magnitude == 0)
+				rb2d.bodyType = RigidbodyType2D.Static;
+
 	}
 
 
 	void OnCollisionEnter2D (Collision2D col){
 
 		if (col.gameObject.tag == "DataPiece") {
-			rb2d.velocity = Vector2.zero;
+			collided = true;
 		}
 	}
 

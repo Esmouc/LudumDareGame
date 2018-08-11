@@ -19,17 +19,18 @@ public class Bullet : MonoBehaviour {
 	void Update () {
 		
 	}
+		
+	  public void UpdateVelocity()
+	  {
+	    rb2d.velocity = direction * speed * Time.deltaTime;
+	  }
 
-  public void UpdateVelocity()
-  {
-    rb2d = GetComponent<Rigidbody2D> ();
-    rb2d.velocity = direction * speed * Time.deltaTime;
-  }
 
-  public void OnTriggerEnter2D(Collider2D collision)
-  {
-    Destroy(gameObject);
-  }
+	  public void OnTriggerEnter2D(Collider2D collision)
+	  {
+	    Destroy(gameObject);
+	  }
+
 
 	void OnCollisionEnter2D (Collision2D col){
 

@@ -11,8 +11,6 @@ public class Spyware : Enemy {
 	// Use this for initialization
 	void Start () {
 
-		rb2d = GetComponent<Rigidbody2D> ();
-
 		rb2d.velocity = Vector2.down * speed * Time.deltaTime;
 
 	}
@@ -28,10 +26,7 @@ public class Spyware : Enemy {
 
 		lives--;
 
-		if (col.gameObject.tag == "Bullet")
-			Destroy (col.gameObject);
-
-		if (lives == 0 || col.gameObject.tag == "Ground")
+		if (lives == 0 || col.gameObject.tag == "DataPiece")
 			Destroy (this.gameObject);
 
 	}
