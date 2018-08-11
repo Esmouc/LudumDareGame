@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 212029746365908580}
   - component: {fileID: 50308382716545050}
   - component: {fileID: 114106700934186018}
+  - component: {fileID: 58713345706301016}
   m_Layer: 0
   m_Name: SpyWare
   m_TagString: Untagged
@@ -515,6 +516,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &58713345706301016
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1322297339352280}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.19500002
 --- !u!61 &61025254716569346
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -727,7 +743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shieldResistance: 2
-  Bullet: {fileID: 1733235079044418, guid: 89259d44d0cd6a643aad4e24f60c47b2, type: 2}
+  Bullet: {fileID: 1594265364079394, guid: f15f0521fa309434a9c6eb66e04c55be, type: 2}
 --- !u!114 &114106700934186018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -756,7 +772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shieldResistance: 2
-  Bullet: {fileID: 1733235079044418, guid: 89259d44d0cd6a643aad4e24f60c47b2, type: 2}
+  Bullet: {fileID: 1594265364079394, guid: f15f0521fa309434a9c6eb66e04c55be, type: 2}
 --- !u!114 &114543822094553708
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -769,7 +785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shieldResistance: 2
-  Bullet: {fileID: 1733235079044418, guid: 89259d44d0cd6a643aad4e24f60c47b2, type: 2}
+  Bullet: {fileID: 1594265364079394, guid: f15f0521fa309434a9c6eb66e04c55be, type: 2}
 --- !u!114 &114543904460824872
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -782,7 +798,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shieldResistance: 2
-  Bullet: {fileID: 1733235079044418, guid: 89259d44d0cd6a643aad4e24f60c47b2, type: 2}
+  Bullet: {fileID: 1594265364079394, guid: f15f0521fa309434a9c6eb66e04c55be, type: 2}
 --- !u!114 &114592064925036416
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -795,7 +811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shieldResistance: 2
-  Bullet: {fileID: 1733235079044418, guid: 89259d44d0cd6a643aad4e24f60c47b2, type: 2}
+  Bullet: {fileID: 1594265364079394, guid: f15f0521fa309434a9c6eb66e04c55be, type: 2}
 --- !u!114 &114773289860657476
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -808,7 +824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shieldResistance: 2
-  Bullet: {fileID: 1733235079044418, guid: 89259d44d0cd6a643aad4e24f60c47b2, type: 2}
+  Bullet: {fileID: 1594265364079394, guid: f15f0521fa309434a9c6eb66e04c55be, type: 2}
 --- !u!114 &114799829983079820
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -821,7 +837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shieldResistance: 2
-  Bullet: {fileID: 1733235079044418, guid: 89259d44d0cd6a643aad4e24f60c47b2, type: 2}
+  Bullet: {fileID: 1594265364079394, guid: f15f0521fa309434a9c6eb66e04c55be, type: 2}
 --- !u!114 &114817132725743054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -834,7 +850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shieldResistance: 2
-  Bullet: {fileID: 1733235079044418, guid: 89259d44d0cd6a643aad4e24f60c47b2, type: 2}
+  Bullet: {fileID: 1594265364079394, guid: f15f0521fa309434a9c6eb66e04c55be, type: 2}
 --- !u!212 &212029746365908580
 SpriteRenderer:
   m_ObjectHideFlags: 1

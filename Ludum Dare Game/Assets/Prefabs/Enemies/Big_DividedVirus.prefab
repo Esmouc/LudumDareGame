@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212561563040449096}
   - component: {fileID: 50385523047318580}
   - component: {fileID: 114131058855787898}
+  - component: {fileID: 58233730353393096}
   m_Layer: 0
   m_Name: Small_DividedVirus (1)
   m_TagString: Untagged
@@ -74,6 +75,7 @@ GameObject:
   - component: {fileID: 212093464433312058}
   - component: {fileID: 50519266472420826}
   - component: {fileID: 114104777371922118}
+  - component: {fileID: 58152034667339546}
   m_Layer: 0
   m_Name: Small_DividedVirus (1)
   m_TagString: Untagged
@@ -92,6 +94,7 @@ GameObject:
   - component: {fileID: 212054512631196310}
   - component: {fileID: 50120392752128960}
   - component: {fileID: 114934333936917484}
+  - component: {fileID: 58735549264062696}
   m_Layer: 0
   m_Name: Small_DividedVirus
   m_TagString: Untagged
@@ -129,6 +132,7 @@ GameObject:
   - component: {fileID: 212624124194509024}
   - component: {fileID: 50200124483783828}
   - component: {fileID: 114002206378654134}
+  - component: {fileID: 58317000397782170}
   m_Layer: 0
   m_Name: Small_DividedVirus (1)
   m_TagString: Untagged
@@ -147,6 +151,7 @@ GameObject:
   - component: {fileID: 212009979583980254}
   - component: {fileID: 50649647970684326}
   - component: {fileID: 114969265870267890}
+  - component: {fileID: 58215643730994284}
   m_Layer: 0
   m_Name: Small_DividedVirus
   m_TagString: Untagged
@@ -165,6 +170,7 @@ GameObject:
   - component: {fileID: 212091564468115862}
   - component: {fileID: 50027797109345830}
   - component: {fileID: 114349285187150284}
+  - component: {fileID: 58312889983332804}
   m_Layer: 0
   m_Name: Small_DividedVirus
   m_TagString: Untagged
@@ -183,6 +189,7 @@ GameObject:
   - component: {fileID: 212931589919505692}
   - component: {fileID: 50427338047214544}
   - component: {fileID: 114113481517955240}
+  - component: {fileID: 58421040681117872}
   m_Layer: 0
   m_Name: Small_DividedVirus
   m_TagString: Untagged
@@ -299,6 +306,7 @@ GameObject:
   - component: {fileID: 212147583667825296}
   - component: {fileID: 50052950683044822}
   - component: {fileID: 114833574242634120}
+  - component: {fileID: 58221044248425938}
   m_Layer: 0
   m_Name: Small_DividedVirus (1)
   m_TagString: Untagged
@@ -866,6 +874,96 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.22999999
+--- !u!58 &58152034667339546
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1119161719834440}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00000023841858, y: 0.0000009536743}
+  serializedVersion: 2
+  m_Radius: 0.23000003
+--- !u!58 &58215643730994284
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1424152292066952}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00000047683716, y: 0.0000009536743}
+  serializedVersion: 2
+  m_Radius: 0.23000003
+--- !u!58 &58221044248425938
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1958815343344718}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.23000003
+--- !u!58 &58233730353393096
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1045237685653216}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.23000003
+--- !u!58 &58312889983332804
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1497415401780028}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.0000009536743}
+  serializedVersion: 2
+  m_Radius: 0.23000003
+--- !u!58 &58317000397782170
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1404996489717198}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.0000009536743}
+  serializedVersion: 2
+  m_Radius: 0.23000003
 --- !u!58 &58328446937361454
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -881,6 +979,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.22999999
+--- !u!58 &58421040681117872
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1529180440552056}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.23000003
 --- !u!58 &58703683183017684
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -896,6 +1009,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.22999999
+--- !u!58 &58735549264062696
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1218146872708638}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.00000023841858, y: 0.0000009536743}
+  serializedVersion: 2
+  m_Radius: 0.23000003
 --- !u!58 &58948724281451616
 CircleCollider2D:
   m_ObjectHideFlags: 1

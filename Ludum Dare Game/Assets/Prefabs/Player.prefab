@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212849133955209600}
   - component: {fileID: 114299937299154864}
   - component: {fileID: 50356581145143156}
-  - component: {fileID: 61269521425262382}
+  - component: {fileID: 60803223522522552}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -37,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1429301473675858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.23, z: 50}
-  m_LocalScale: {x: 1.8645, y: 6.106238, z: -5.2}
+  m_LocalPosition: {x: 1.934, y: 0.858, z: 50}
+  m_LocalScale: {x: 0.589, y: 0.589, z: 0.589}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -52,19 +52,19 @@ Rigidbody2D:
   m_GameObject: {fileID: 1429301473675858}
   m_BodyType: 0
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &61269521425262382
-BoxCollider2D:
+  m_Constraints: 4
+--- !u!60 &60803223522522552
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -75,19 +75,22 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.003864862, y: 0.0011795796}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 0.71, y: 0.69}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.13681059, y: 0.13640878}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.31568465, y: 0.3210601}
+      - {x: -0.0005990824, y: 0.21640657}
+      - {x: 0.31017086, y: 0.3138203}
+      - {x: 0.0008555139, y: -0.3283001}
 --- !u!114 &114299937299154864
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -101,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 1733235079044418, guid: 3ff4fda2f84b32e4d9c11e4a69130b72, type: 2}
   lineal_speed: 400
-  rotation_speed: 550
+  rotation_speed: 10000
   base_bullet_speed: 400
   rof: 0.15
 --- !u!212 &212849133955209600
@@ -139,10 +142,10 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: fa5db9dbb5ae7764aacadab2aa7202d2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5

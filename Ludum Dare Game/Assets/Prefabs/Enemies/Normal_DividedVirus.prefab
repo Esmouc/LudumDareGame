@@ -44,7 +44,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1817246870068006
 GameObject:
   m_ObjectHideFlags: 1
@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 212043444599333572}
   - component: {fileID: 50013352725446588}
   - component: {fileID: 114398948821655378}
+  - component: {fileID: 58875679235504130}
   m_Layer: 0
   m_Name: Small_DividedVirus
   m_TagString: Untagged
@@ -74,6 +75,7 @@ GameObject:
   - component: {fileID: 212619656130094388}
   - component: {fileID: 50421401623727450}
   - component: {fileID: 114299935665079270}
+  - component: {fileID: 58679349817411154}
   m_Layer: 0
   m_Name: Small_DividedVirus (1)
   m_TagString: Untagged
@@ -211,6 +213,36 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.22999999
+--- !u!58 &58679349817411154
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1843746953135504}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.23000003
+--- !u!58 &58875679235504130
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1817246870068006}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00000047683716, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.23000003
 --- !u!114 &114299935665079270
 MonoBehaviour:
   m_ObjectHideFlags: 1
