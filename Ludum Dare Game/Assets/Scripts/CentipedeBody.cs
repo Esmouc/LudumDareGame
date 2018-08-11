@@ -21,8 +21,9 @@ public class CentipedeBody : MonoBehaviour {
     GetComponent<Centipede>().dormant = false;
     this.enabled = false;
     GetComponent<SpriteRenderer>().sprite = head_sprite;
-  }
+		}else{
     transform.position = Vector3.MoveTowards(transform.position,target.position, speed * Time.deltaTime);
     transform.up = target.position - transform.position;
+		}
 	}
 }

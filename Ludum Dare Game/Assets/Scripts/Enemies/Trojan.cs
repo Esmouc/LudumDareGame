@@ -38,13 +38,13 @@ public class Trojan : Enemy {
 			}
 
 		}
-		
+			
 	}
 
 	void OnCollisionEnter2D (Collision2D col){
 
-		if (col.gameObject.tag == "DataPiece") {
-			rb2d.velocity = Vector2.zero;
+		if (col.gameObject.tag == "DataPiece" && col.gameObject.GetComponent<Rigidbody2D>().bodyType == RigidbodyType2D.Static) {
+			rb2d.bodyType = RigidbodyType2D.Static;
 		}
 
 		if (col.gameObject.tag == "Bullet") {

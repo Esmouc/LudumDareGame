@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Centipede : MonoBehaviour {
+public class Centipede : Enemy {
 
   public int number_of_bodies = 5;
-  public float speed = 150.0f;
   public float rotation_velocity = 150.0f;
   public float angle_factor;
   public float current_angle;
@@ -56,4 +55,19 @@ public class Centipede : MonoBehaviour {
     }
 
 	}
+
+	void OnCollisionEnter2D (Collision2D col){
+		
+		if (col.gameObject.tag == "DataPiece" && col.gameObject.GetComponent<Rigidbody2D>().bodyType == RigidbodyType2D.Static) {
+			//TODO
+		}
+
+		if (col.gameObject.tag == "Bullet") {
+			lives--;
+			if (lives == 0) {
+				Destroy (gameObject);
+			}
+		}
+		
+	}	
 }

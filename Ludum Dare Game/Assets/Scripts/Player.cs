@@ -38,27 +38,24 @@ public class Player : MonoBehaviour {
 		float leftMagnitude = new Vector2(leftHorizontal, leftVertical).magnitude;
 		float rightMagnitude = new Vector2(rightHorizontal, rightVertical).magnitude;
 
-	    /*if(magnitude > 0.1f) {
-	      float current_angle = Mathf.Atan2(horizontal,vertical);
-	      current_angle = Mathf.Rad2Deg * current_angle;
+		if (Input.GetMouseButton (0)){
+			
+			Vector3 mousePos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+			mousePos = new Vector3 (mousePos.x, mousePos.y, 0);
+			transform.up = -mousePos + transform.position;
 
+			rotation = transform.rotation.eulerAngles.z;
 
-	      //magnitude = new Vector2(horizontal, vertical).magnitude;
+			if (shot_cd >= rof) {
+				GameObject temp_bullet = Instantiate(bullet, transform.position - transform.up/2.5f, Quaternion.Euler(0.0f, 0.0f, rotation));
+				temp_bullet.GetComponent<Bullet>().direction = -transform.up;
+				temp_bullet.GetComponent<Bullet>().speed = base_bullet_speed + lineal_speed * leftMagnitude;
+				temp_bullet.GetComponent<Bullet>().UpdateVelocity();
+				shot_cd = 0.0f;
+			}
 
-	      if(strafe < 0.5f) {
-	        transform.rotation = Quaternion.RotateTowards(Quaternion.Euler(0.0f,0.0f,rotation),Quaternion.Euler(0.0f,0.0f,current_angle),rotation_speed * Time.deltaTime * magnitude);
-	        rotation = transform.rotation.eulerAngles.z;
-	        //transform.Translate(-transform.up * lineal_speed * magnitude * Time.deltaTime, Space.World);
-	        rb.velocity = -transform.up * lineal_speed * magnitude * Time.deltaTime;
-	      } else {
-	        //transform.Translate(new Vector3(horizontal,-vertical,0.0f) * lineal_speed * magnitude * Time.deltaTime, Space.World);
-	        //rb.velocity = new Vector3(horizontal,-vertical,0.0f) * lineal_speed * magnitude * Time.deltaTime;
-			rb.velocity = new Vector3(horizontal,-vertical,0.0f) * lineal_speed * magnitude * Time.deltaTime;
-	      }
-	    }else{
-	      //transform.Translate(new Vector3(0.0f,-0.5f) * Time.deltaTime, Space.World);
-	      rb.velocity = new Vector3(0.0f,-20.0f) * Time.deltaTime;
-	    }*/
+			if(shot_cd < rof) shot_cd += Time.deltaTime;
+		}
 
 		if (leftMagnitude > 0.1f) {
 
@@ -90,3 +87,25 @@ public class Player : MonoBehaviour {
 		}
 	}
 }
+
+/*if(magnitude > 0.1f) {
+	      float current_angle = Mathf.Atan2(horizontal,vertical);
+	      current_angle = Mathf.Rad2Deg * current_angle;
+
+
+	      //magnitude = new Vector2(horizontal, vertical).magnitude;
+
+	      if(strafe < 0.5f) {
+	        transform.rotation = Quaternion.RotateTowards(Quaternion.Euler(0.0f,0.0f,rotation),Quaternion.Euler(0.0f,0.0f,current_angle),rotation_speed * Time.deltaTime * magnitude);
+	        rotation = transform.rotation.eulerAngles.z;
+	        //transform.Translate(-transform.up * lineal_speed * magnitude * Time.deltaTime, Space.World);
+	        rb.velocity = -transform.up * lineal_speed * magnitude * Time.deltaTime;
+	      } else {
+	        //transform.Translate(new Vector3(horizontal,-vertical,0.0f) * lineal_speed * magnitude * Time.deltaTime, Space.World);
+	        //rb.velocity = new Vector3(horizontal,-vertical,0.0f) * lineal_speed * magnitude * Time.deltaTime;
+			rb.velocity = new Vector3(horizontal,-vertical,0.0f) * lineal_speed * magnitude * Time.deltaTime;
+	      }
+	    }else{
+	      //transform.Translate(new Vector3(0.0f,-0.5f) * Time.deltaTime, Space.World);
+	      rb.velocity = new Vector3(0.0f,-20.0f) * Time.deltaTime;
+	    }*/
