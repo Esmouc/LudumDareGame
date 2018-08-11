@@ -7,6 +7,8 @@ public class CentipedeBody : MonoBehaviour {
   Rigidbody2D rb;
   public Transform target;
   public float speed;
+  
+  public Sprite head_sprite;
 
 	// Use this for initialization
 	void Start () {
@@ -18,7 +20,9 @@ public class CentipedeBody : MonoBehaviour {
   if(target == null) {
     GetComponent<Centipede>().dormant = false;
     this.enabled = false;
+    GetComponent<SpriteRenderer>().sprite = head_sprite;
   }
-    transform.position = Vector3.MoveTowards(transform.position,target.position,speed * Time.deltaTime);
+    transform.position = Vector3.MoveTowards(transform.position,target.position, speed * Time.deltaTime);
+    transform.up = target.position - transform.position;
 	}
 }
