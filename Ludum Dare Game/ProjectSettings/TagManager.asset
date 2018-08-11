@@ -7,6 +7,8 @@ TagManager:
   - Bullet
   - Ground
   - DataPiece
+  - FreeData
+  - RedBullet
   layers:
   - Default
   - TransparentFX
