@@ -22,6 +22,7 @@ public class Bullet : MonoBehaviour {
 		
 	  public void UpdateVelocity()
 	  {
+		rb2d = GetComponent<Rigidbody2D> ();
 	    rb2d.velocity = direction * speed * Time.deltaTime;
 	  }
 
