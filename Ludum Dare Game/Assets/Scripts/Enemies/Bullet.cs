@@ -12,17 +12,33 @@ public class Bullet : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
-		rb2d = GetComponent<Rigidbody2D> ();
-
-		rb2d.velocity = direction * speed * Time.deltaTime;
+    rb2d = GetComponent<Rigidbody2D> ();
+	}
+	
+	// Update is called once per frame
+	void Update () {
 		
 	}
 
+<<<<<<< .mine
+  public void UpdateVelocity()
+  {
+    rb2d = GetComponent<Rigidbody2D> ();
+    rb2d.velocity = direction * speed * Time.deltaTime;
+  }
+
+  public void OnTriggerEnter2D(Collider2D collision)
+  {
+    Destroy(gameObject);
+  }
+
+||||||| .r6
+=======
 	void OnCollisionEnter2D (Collision2D col){
 
 		Destroy (this.gameObject);
 
 	}
 
+>>>>>>> .r9
 }

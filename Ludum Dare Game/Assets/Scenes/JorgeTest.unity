@@ -307,8 +307,8 @@ MonoBehaviour:
   bullet: {fileID: 1733235079044418, guid: 3ff4fda2f84b32e4d9c11e4a69130b72, type: 2}
   lineal_speed: 0.1
   rotation_speed: 550
-  base_bullet_speed: 0.15
-  rof: 1
+  base_bullet_speed: 400
+  rof: 0.15
 --- !u!212 &843717368
 SpriteRenderer:
   m_ObjectHideFlags: 0

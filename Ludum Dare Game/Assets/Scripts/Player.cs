@@ -45,12 +45,15 @@ public class Player : MonoBehaviour {
       } else {
         transform.Translate(new Vector3(horizontal,-vertical,0.0f) * lineal_speed * magnitude, Space.World);
       }
+    }else{
+      transform.Translate(new Vector3(0.0f,-0.01f), Space.World);
     }
 
     if(shooting && shot_cd >= rof) {
       GameObject temp_bullet = Instantiate(bullet, transform.position - transform.up, Quaternion.Euler(0.0f, 0.0f, rotation));
       temp_bullet.GetComponent<Bullet>().direction = -transform.up;
       temp_bullet.GetComponent<Bullet>().speed = base_bullet_speed + lineal_speed * magnitude;
+      temp_bullet.GetComponent<Bullet>().UpdateVelocity();
       shot_cd = 0.0f;
     }
 
