@@ -22,7 +22,7 @@ public class DataPiece : MonoBehaviour {
 	void Update () {
 
 		if (collided)
-			if (rb2d.velocity.magnitude == 0)
+			if (rb2d.velocity.magnitude <= 0.05f)
 				rb2d.bodyType = RigidbodyType2D.Static;
 
 	}
