@@ -141,6 +141,9 @@ public class GameManager : MonoBehaviour {
 
     if(corruption_level >= corruption_limit) {
       game_state = GameState.EndMenu;
+		AudioManager.instance.StopMusic ("BGM");
+		AudioManager.instance.PlaySFX ("BlueScreen");
+		SceneManager.LoadScene(2);
     }
  
     // Glitches and some chromatic aberration
@@ -169,9 +172,10 @@ public class GameManager : MonoBehaviour {
 
   void EndMenuUpdate()
   {
-    if(restart_game) {
+	if(Input.GetKeyDown(KeyCode.F8)) {
       Restart();
       game_state = GameState.InGame;
+	  AudioManager.PlayMusic ("BGM");
       SceneManager.LoadScene(1);
     }
   }

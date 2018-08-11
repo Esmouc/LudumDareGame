@@ -755,7 +755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e91889e5751a36b40b38dd1e38933a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lives: 5
+  lives: 1
   corruptionLevel: 3
   speed: 60
   shieldSpeed: 100

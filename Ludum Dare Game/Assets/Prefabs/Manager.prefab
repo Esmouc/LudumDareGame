@@ -77,7 +77,7 @@ MonoBehaviour:
     sfxPitch: 1
     sfxRandomVolume: 0
     sfxRandomPitch: 0
-    sfxLoop: 1
+    sfxLoop: 0
   - sfxName: ButtonSelect
     sfxClip: {fileID: 8300000, guid: 82ae9d26cce901b40a40a8d85ef16c72, type: 3}
     sfxEnable: 1

@@ -242,6 +242,177 @@ MonoBehaviour:
 ||||||| .r26
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< .mine
+  musicArray:
+  - musicName: BGM
+    musicClip: {fileID: 8300000, guid: 0fe39b04d4e60b242af303642b645a07, type: 3}
+    musicEnable: 1
+    musicVolume: 1
+    musicPitch: 1
+    musicRandomVolume: 0
+    musicRandomPitch: 0
+    musicLoop: 1
+  sfxs:
+  - sfxName: 
+    sfxClip: {fileID: 0}
+    sfxEnable: 0
+    sfxVolume: 0
+    sfxPitch: 0.5
+    sfxRandomVolume: 0
+    sfxRandomPitch: 0
+    sfxLoop: 0
+  - sfxName: BlueScreen
+    sfxClip: {fileID: 8300000, guid: 07b02bb0f127ecf4d9ad697ba3082d68, type: 3}
+    sfxEnable: 1
+    sfxVolume: 1
+    sfxPitch: 1
+    sfxRandomVolume: 0
+    sfxRandomPitch: 0
+    sfxLoop: 0
+  - sfxName: ButtonSelect
+    sfxClip: {fileID: 8300000, guid: 82ae9d26cce901b40a40a8d85ef16c72, type: 3}
+    sfxEnable: 1
+    sfxVolume: 1
+    sfxPitch: 1
+    sfxRandomVolume: 0
+    sfxRandomPitch: 0
+    sfxLoop: 0
+  - sfxName: EnemyShot
+    sfxClip: {fileID: 8300000, guid: 36dce86dfe799b842a294235cd9f029f, type: 3}
+    sfxEnable: 1
+    sfxVolume: 1
+    sfxPitch: 1
+    sfxRandomVolume: 0
+    sfxRandomPitch: 0
+    sfxLoop: 0
+  - sfxName: Glitch1
+    sfxClip: {fileID: 8300000, guid: ee5c2041fe5a26247829b0e0a6f39e04, type: 3}
+    sfxEnable: 1
+    sfxVolume: 1
+    sfxPitch: 1
+    sfxRandomVolume: 0
+    sfxRandomPitch: 0
+    sfxLoop: 0
+  - sfxName: Glitch2
+    sfxClip: {fileID: 8300000, guid: f99c6ab3fa468c44b9de5a42af6ce160, type: 3}
+    sfxEnable: 1
+    sfxVolume: 1
+    sfxPitch: 1
+    sfxRandomVolume: 0
+    sfxRandomPitch: 0
+    sfxLoop: 0
+  - sfxName: PlayerShot
+    sfxClip: {fileID: 8300000, guid: adb417e757bf37e44a797b89a9435b20, type: 3}
+    sfxEnable: 1
+    sfxVolume: 1
+    sfxPitch: 1
+    sfxRandomVolume: 0
+    sfxRandomPitch: 0
+    sfxLoop: 0
+  - sfxName: TrojanBlink
+    sfxClip: {fileID: 8300000, guid: f8f25281ce7e2154ba40b869aad62b87, type: 3}
+    sfxEnable: 1
+    sfxVolume: 1
+    sfxPitch: 1
+    sfxRandomVolume: 0
+    sfxRandomPitch: 0
+    sfxLoop: 0
+  - sfxName: SubdividedVirus
+    sfxClip: {fileID: 8300000, guid: 06fd6bcc519bfbe44bd47d89142fb28c, type: 3}
+    sfxEnable: 1
+    sfxVolume: 1
+    sfxPitch: 1
+    sfxRandomVolume: 0
+    sfxRandomPitch: 0
+    sfxLoop: 0
+--- !u!114 &992063581
+MonoBehaviour:
+||||||| .r27
+  musicArray:
+  - musicName: BGM
+    musicClip: {fileID: 8300000, guid: 0fe39b04d4e60b242af303642b645a07, type: 3}
+    musicEnable: 1
+    musicVolume: 1
+    musicPitch: 1
+    musicRandomVolume: 0
+    musicRandomPitch: 0
+    musicLoop: 1
+  sfxs:
+  - sfxName: 
+    sfxClip: {fileID: 0}
+    sfxEnable: 0
+    sfxVolume: 0
+    sfxPitch: 0.5
+    sfxRandomVolume: 0
+    sfxRandomPitch: 0
+    sfxLoop: 0
+  - sfxName: BlueScreen
+    sfxClip: {fileID: 8300000, guid: 07b02bb0f127ecf4d9ad697ba3082d68, type: 3}
+    sfxEnable: 1
+    sfxVolume: 1
+    sfxPitch: 1
+    sfxRandomVolume: 0
+    sfxRandomPitch: 0
+    sfxLoop: 1
+  - sfxName: ButtonSelect
+    sfxClip: {fileID: 8300000, guid: 82ae9d26cce901b40a40a8d85ef16c72, type: 3}
+    sfxEnable: 1
+    sfxVolume: 1
+    sfxPitch: 1
+    sfxRandomVolume: 0
+    sfxRandomPitch: 0
+    sfxLoop: 0
+  - sfxName: EnemyShot
+    sfxClip: {fileID: 8300000, guid: 36dce86dfe799b842a294235cd9f029f, type: 3}
+    sfxEnable: 1
+    sfxVolume: 1
+    sfxPitch: 1
+    sfxRandomVolume: 0
+    sfxRandomPitch: 0
+    sfxLoop: 0
+  - sfxName: Glitch1
+    sfxClip: {fileID: 8300000, guid: ee5c2041fe5a26247829b0e0a6f39e04, type: 3}
+    sfxEnable: 1
+    sfxVolume: 1
+    sfxPitch: 1
+    sfxRandomVolume: 0
+    sfxRandomPitch: 0
+    sfxLoop: 0
+  - sfxName: Glitch2
+    sfxClip: {fileID: 8300000, guid: f99c6ab3fa468c44b9de5a42af6ce160, type: 3}
+    sfxEnable: 1
+    sfxVolume: 1
+    sfxPitch: 1
+    sfxRandomVolume: 0
+    sfxRandomPitch: 0
+    sfxLoop: 0
+  - sfxName: PlayerShot
+    sfxClip: {fileID: 8300000, guid: adb417e757bf37e44a797b89a9435b20, type: 3}
+    sfxEnable: 1
+    sfxVolume: 1
+    sfxPitch: 1
+    sfxRandomVolume: 0
+    sfxRandomPitch: 0
+    sfxLoop: 0
+  - sfxName: TrojanBlink
+    sfxClip: {fileID: 8300000, guid: f8f25281ce7e2154ba40b869aad62b87, type: 3}
+    sfxEnable: 1
+    sfxVolume: 1
+    sfxPitch: 1
+    sfxRandomVolume: 0
+    sfxRandomPitch: 0
+    sfxLoop: 0
+  - sfxName: SubdividedVirus
+    sfxClip: {fileID: 8300000, guid: 06fd6bcc519bfbe44bd47d89142fb28c, type: 3}
+    sfxEnable: 1
+    sfxVolume: 1
+    sfxPitch: 1
+    sfxRandomVolume: 0
+    sfxRandomPitch: 0
+    sfxLoop: 0
+--- !u!114 &992063581
+MonoBehaviour:
+=======
   AudioManager: {fileID: 0}
   game_state: 0
   corruption_level: 0
@@ -252,6 +423,7 @@ MonoBehaviour:
   score: 0
 --- !u!4 &992063582
 Transform:
+>>>>>>> .r29
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -269,7 +441,7 @@ Transform:
   AudioManager: {fileID: 0}
   game_state: 0
   corruption_level: 0
-  corruption_limit: 1000
+  corruption_limit: 20
   corrupted_data: 0
   chance_of_glitching: 0
   free_memory_chance: 0
