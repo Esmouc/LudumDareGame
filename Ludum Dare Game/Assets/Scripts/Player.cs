@@ -10,7 +10,7 @@ public class Player : MonoBehaviour {
   public float base_bullet_speed = 0.15f;
   public float rof = 0.1f;
 
-  
+  private Rigidbody2D rb;
   private float rotation;
   private float shot_cd;
 
@@ -19,14 +19,18 @@ public class Player : MonoBehaviour {
     rotation = 0.0f;
     transform.rotation = Quaternion.identity;
     shot_cd = 0.0f;
+    rb = GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+    rb = GetComponent<Rigidbody2D>();
+
     float horizontal = Input.GetAxis("Horizontal");
     float vertical = -Input.GetAxis("Vertical");
     float strafe = Input.GetAxis("Strafe");
     bool shooting = Input.GetKey("joystick button 2");
+    if(shooting == false) shooting = Input.GetKey("space");
 
     //float magnitude = Mathf.Abs(horizontal) + Mathf.Abs(vertical);
     float magnitude = new Vector2(horizontal, vertical).magnitude;
@@ -41,12 +45,15 @@ public class Player : MonoBehaviour {
       if(strafe < 0.5f) {
         transform.rotation = Quaternion.RotateTowards(Quaternion.Euler(0.0f,0.0f,rotation),Quaternion.Euler(0.0f,0.0f,current_angle),rotation_speed * Time.deltaTime * magnitude);
         rotation = transform.rotation.eulerAngles.z;
-        transform.Translate(-transform.up * lineal_speed * magnitude * Time.deltaTime, Space.World);
+        //transform.Translate(-transform.up * lineal_speed * magnitude * Time.deltaTime, Space.World);
+        rb.velocity = -transform.up * lineal_speed * magnitude * Time.deltaTime;
       } else {
-        transform.Translate(new Vector3(horizontal,-vertical,0.0f) * lineal_speed * magnitude * Time.deltaTime, Space.World);
+        //transform.Translate(new Vector3(horizontal,-vertical,0.0f) * lineal_speed * magnitude * Time.deltaTime, Space.World);
+        rb.velocity = new Vector3(horizontal,-vertical,0.0f) * lineal_speed * magnitude * Time.deltaTime;
       }
     }else{
-      transform.Translate(new Vector3(0.0f,-0.5f) * Time.deltaTime, Space.World);
+      //transform.Translate(new Vector3(0.0f,-0.5f) * Time.deltaTime, Space.World);
+      rb.velocity = new Vector3(0.0f,-20.0f) * Time.deltaTime;
     }
 
     if(shooting && shot_cd >= rof) {
