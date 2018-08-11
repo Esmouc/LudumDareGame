@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.PostProcessing;
 
 public class GameManager : MonoBehaviour {
 
@@ -26,10 +27,12 @@ public class GameManager : MonoBehaviour {
 
   public int score;
 
-  public bool started_game;
-  public bool exit_game;
-  public bool continued_game;
-  public bool restart_game;
+  private bool started_game;
+  private bool exit_game;
+  private bool continued_game;
+  private bool restart_game;
+
+  private PostProcessingProfile camera_effects;
 
 
   private void Awake()
@@ -56,6 +59,10 @@ public class GameManager : MonoBehaviour {
     restart_game = false;
 
     score = 0;
+    corruption_level = 0.0f;
+    corrupted_data = 0;
+
+    camera_effects = null;
 	}
 
   void Restart()
@@ -66,6 +73,21 @@ public class GameManager : MonoBehaviour {
     restart_game = false;
 
     score = 0;
+    corruption_level = 0.0f;
+    corrupted_data = 0;
+  }
+
+  void RestartGraphicProfile()
+  {
+    VignetteModel.Settings temp_vignette = camera_effects.vignette.settings;
+    temp_vignette.intensity = 0.0f;
+    camera_effects.vignette.settings = temp_vignette;
+    GrainModel.Settings temp_grain = camera_effects.grain.settings;
+    temp_grain.intensity = 0.0f;
+    camera_effects.grain.settings = temp_grain;
+    ChromaticAberrationModel.Settings temp_aberration = camera_effects.chromaticAberration.settings;
+    temp_aberration.intensity = 0.0f;
+    camera_effects.chromaticAberration.settings = temp_aberration;
   }
 	
 	// Update is called once per frame
@@ -89,11 +111,19 @@ public class GameManager : MonoBehaviour {
     if(started_game) {
       game_state = GameState.InGame;
       SceneManager.LoadScene(1);
+      camera_effects = Camera.main.GetComponent<PostProcessingBehaviour>().profile;
+      RestartGraphicProfile();
     }
   }
 
   void InGameUpdate()
   {
+
+    if(camera_effects == null) {
+      camera_effects = Camera.main.GetComponent<PostProcessingBehaviour>().profile;
+      RestartGraphicProfile();
+    }
+
     if(Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown("joystick button 7")) {
       game_state = GameState.PauseMenu;
       Time.timeScale = 0.0f;
@@ -101,6 +131,28 @@ public class GameManager : MonoBehaviour {
 
     if(corruption_level >= corruption_limit) {
       game_state = GameState.EndMenu;
+    }
+ 
+
+    if(corruption_level > 1.0f) {
+      // Glitches and some chromatic aberration
+      ChromaticAberrationModel.Settings temp_aberration = camera_effects.chromaticAberration.settings;
+      temp_aberration.intensity = 0.5f;
+      camera_effects.chromaticAberration.settings = temp_aberration;
+    }
+
+    if(corruption_level > 3.0f) {
+      // More glitches, dithering / grain
+      GrainModel.Settings temp_grain = camera_effects.grain.settings;
+      temp_grain.intensity = 0.3f;
+      camera_effects.grain.settings = temp_grain;
+    }
+
+    if(corruption_level > 7.5f) {
+      // Audio glitches, vignette, bloom
+      VignetteModel.Settings temp_vignette = camera_effects.vignette.settings;
+      temp_vignette.intensity = 0.3f;
+      camera_effects.vignette.settings = temp_vignette;
     }
   }
 
@@ -122,5 +174,24 @@ public class GameManager : MonoBehaviour {
     }
   }
 
+  public void StartGame()
+  {
+    started_game = true;
+  }
+
+  public void ExitGame()
+  {
+    exit_game = true;
+  }
+
+  public void ContinueGame()
+  {
+    continued_game = true;
+  }
+
+  public void RestartGame()
+  {
+    restart_game = true;
+  }
 
 }

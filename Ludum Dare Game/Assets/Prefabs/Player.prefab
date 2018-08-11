@@ -105,7 +105,7 @@ MonoBehaviour:
   bullet: {fileID: 1733235079044418, guid: 3ff4fda2f84b32e4d9c11e4a69130b72, type: 2}
   lineal_speed: 400
   rotation_speed: 10000
-  base_bullet_speed: 400
+  base_bullet_speed: 600
   rof: 0.15
 --- !u!212 &212849133955209600
 SpriteRenderer:
