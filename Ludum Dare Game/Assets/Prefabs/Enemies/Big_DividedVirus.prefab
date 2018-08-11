@@ -697,14 +697,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1988928330513390}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.2122, y: 4.4298, z: -0.05383534}
+  m_LocalRotation: {x: 0, y: 0, z: 0.25375786, w: 0.9672678}
+  m_LocalPosition: {x: -4.042624, y: 3.0865488, z: -0.05383534}
   m_LocalScale: {x: 1.0817169, y: 1.0817169, z: 1.0817169}
   m_Children:
   - {fileID: 4145973999058148}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 29.4}
 --- !u!4 &4519426207259098
 Transform:
   m_ObjectHideFlags: 1
@@ -1596,7 +1596,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 2
   corruptionLevel: 1
-  speed: 50
+  speed: 120
+  rotation_velocity: 5
   CanDivide: 0
   subViruses: {fileID: 0}
 --- !u!114 &114113481517955240
@@ -1612,7 +1613,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 2
   corruptionLevel: 1
-  speed: 50
+  speed: 120
+  rotation_velocity: 5
   CanDivide: 0
   subViruses: {fileID: 0}
 --- !u!114 &114125530209725846
@@ -1628,7 +1630,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 2
   corruptionLevel: 1
-  speed: 50
+  speed: 120
+  rotation_velocity: 5
   CanDivide: 0
   subViruses: {fileID: 0}
 --- !u!114 &114149124626826662
@@ -1644,7 +1647,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 5
   corruptionLevel: 3
-  speed: 50
+  speed: 80
+  rotation_velocity: 2
   CanDivide: 1
   subViruses: {fileID: 1872182689437124}
 --- !u!114 &114189467158665260
@@ -1661,6 +1665,7 @@ MonoBehaviour:
   lives: 6
   corruptionLevel: 4
   speed: 50
+  rotation_velocity: 0.5
   CanDivide: 1
   subViruses: {fileID: 1660094712101840}
 --- !u!114 &114203586716463826
@@ -1676,7 +1681,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 2
   corruptionLevel: 1
-  speed: 50
+  speed: 120
+  rotation_velocity: 5
   CanDivide: 0
   subViruses: {fileID: 0}
 --- !u!114 &114218935867630226
@@ -1692,7 +1698,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 5
   corruptionLevel: 3
-  speed: 50
+  speed: 80
+  rotation_velocity: 2
   CanDivide: 1
   subViruses: {fileID: 1420915734902316}
 --- !u!114 &114256226544107502
@@ -1708,7 +1715,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 2
   corruptionLevel: 1
-  speed: 50
+  speed: 120
+  rotation_velocity: 5
   CanDivide: 0
   subViruses: {fileID: 0}
 --- !u!114 &114289037322175068
@@ -1724,7 +1732,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 2
   corruptionLevel: 1
-  speed: 50
+  speed: 120
+  rotation_velocity: 5
   CanDivide: 0
   subViruses: {fileID: 0}
 --- !u!114 &114317083681381272
@@ -1740,7 +1749,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 2
   corruptionLevel: 1
-  speed: 50
+  speed: 120
+  rotation_velocity: 5
   CanDivide: 0
   subViruses: {fileID: 0}
 --- !u!114 &114447048747339764
@@ -1756,7 +1766,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 2
   corruptionLevel: 1
-  speed: 50
+  speed: 120
+  rotation_velocity: 5
   CanDivide: 0
   subViruses: {fileID: 0}
 --- !u!114 &114447331710839816
@@ -1772,7 +1783,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 5
   corruptionLevel: 3
-  speed: 50
+  speed: 80
+  rotation_velocity: 2
   CanDivide: 1
   subViruses: {fileID: 1298225441419044}
 --- !u!114 &114451097194764764
@@ -1788,7 +1800,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 2
   corruptionLevel: 1
-  speed: 50
+  speed: 120
+  rotation_velocity: 5
   CanDivide: 0
   subViruses: {fileID: 0}
 --- !u!114 &114489882252203386
@@ -1804,7 +1817,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 2
   corruptionLevel: 1
-  speed: 50
+  speed: 120
+  rotation_velocity: 5
   CanDivide: 0
   subViruses: {fileID: 0}
 --- !u!114 &114512844189047390
@@ -1820,7 +1834,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 2
   corruptionLevel: 1
-  speed: 50
+  speed: 120
+  rotation_velocity: 5
   CanDivide: 0
   subViruses: {fileID: 0}
 --- !u!114 &114594736289906950
@@ -1836,7 +1851,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 2
   corruptionLevel: 1
-  speed: 50
+  speed: 120
+  rotation_velocity: 5
   CanDivide: 0
   subViruses: {fileID: 0}
 --- !u!114 &114650320067487856
@@ -1852,7 +1868,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 2
   corruptionLevel: 1
-  speed: 50
+  speed: 120
+  rotation_velocity: 5
   CanDivide: 0
   subViruses: {fileID: 0}
 --- !u!114 &114665675606654434
@@ -1868,7 +1885,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 2
   corruptionLevel: 1
-  speed: 50
+  speed: 120
+  rotation_velocity: 5
   CanDivide: 0
   subViruses: {fileID: 0}
 --- !u!114 &114706172171687732
@@ -1884,7 +1902,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 2
   corruptionLevel: 1
-  speed: 50
+  speed: 120
+  rotation_velocity: 5
   CanDivide: 0
   subViruses: {fileID: 0}
 --- !u!114 &114780643761802938
@@ -1900,7 +1919,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 5
   corruptionLevel: 3
-  speed: 50
+  speed: 80
+  rotation_velocity: 2
   CanDivide: 1
   subViruses: {fileID: 1142192620665128}
 --- !u!114 &114926576717478734
@@ -1916,7 +1936,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 2
   corruptionLevel: 1
-  speed: 50
+  speed: 120
+  rotation_velocity: 5
   CanDivide: 0
   subViruses: {fileID: 0}
 --- !u!212 &212006598923197910
