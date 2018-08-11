@@ -1,0 +1,155 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1871286449699948}
+  m_IsPrefabAsset: 1
+--- !u!1 &1871286449699948
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4709640556604816}
+  - component: {fileID: 114018202085104582}
+  - component: {fileID: 114011252185681254}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4709640556604816
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1871286449699948}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.8909255, y: 1.2094593, z: -14.896885}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114011252185681254
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1871286449699948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 375fbc43ff06f0442a4a65bf438c9a4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicArray:
+  - musicName: BGM
+    musicClip: {fileID: 8300000, guid: 0fe39b04d4e60b242af303642b645a07, type: 3}
+    musicEnable: 1
+    musicVolume: 1
+    musicPitch: 1
+    musicRandomVolume: 0
+    musicRandomPitch: 0
+    musicLoop: 1
+  sfxs:
+  - sfxName: 
+    sfxClip: {fileID: 0}
+    sfxEnable: 0
+    sfxVolume: 0
+    sfxPitch: 0.5
+    sfxRandomVolume: 0
+    sfxRandomPitch: 0
+    sfxLoop: 0
+  - sfxName: BlueScreen
+    sfxClip: {fileID: 8300000, guid: 07b02bb0f127ecf4d9ad697ba3082d68, type: 3}
+    sfxEnable: 1
+    sfxVolume: 1
+    sfxPitch: 1
+    sfxRandomVolume: 0
+    sfxRandomPitch: 0
+    sfxLoop: 1
+  - sfxName: ButtonSelect
+    sfxClip: {fileID: 8300000, guid: 82ae9d26cce901b40a40a8d85ef16c72, type: 3}
+    sfxEnable: 1
+    sfxVolume: 1
+    sfxPitch: 1
+    sfxRandomVolume: 0
+    sfxRandomPitch: 0
+    sfxLoop: 0
+  - sfxName: EnemyShot
+    sfxClip: {fileID: 8300000, guid: 36dce86dfe799b842a294235cd9f029f, type: 3}
+    sfxEnable: 1
+    sfxVolume: 1
+    sfxPitch: 1
+    sfxRandomVolume: 0
+    sfxRandomPitch: 0
+    sfxLoop: 0
+  - sfxName: Glitch1
+    sfxClip: {fileID: 8300000, guid: ee5c2041fe5a26247829b0e0a6f39e04, type: 3}
+    sfxEnable: 1
+    sfxVolume: 1
+    sfxPitch: 1
+    sfxRandomVolume: 0
+    sfxRandomPitch: 0
+    sfxLoop: 0
+  - sfxName: Glitch2
+    sfxClip: {fileID: 8300000, guid: f99c6ab3fa468c44b9de5a42af6ce160, type: 3}
+    sfxEnable: 1
+    sfxVolume: 1
+    sfxPitch: 1
+    sfxRandomVolume: 0
+    sfxRandomPitch: 0
+    sfxLoop: 0
+  - sfxName: PlayerShot
+    sfxClip: {fileID: 8300000, guid: adb417e757bf37e44a797b89a9435b20, type: 3}
+    sfxEnable: 1
+    sfxVolume: 1
+    sfxPitch: 1
+    sfxRandomVolume: 0
+    sfxRandomPitch: 0
+    sfxLoop: 0
+  - sfxName: TrojanBlink
+    sfxClip: {fileID: 8300000, guid: f8f25281ce7e2154ba40b869aad62b87, type: 3}
+    sfxEnable: 1
+    sfxVolume: 1
+    sfxPitch: 1
+    sfxRandomVolume: 0
+    sfxRandomPitch: 0
+    sfxLoop: 0
+  - sfxName: SubdividedVirus
+    sfxClip: {fileID: 8300000, guid: 06fd6bcc519bfbe44bd47d89142fb28c, type: 3}
+    sfxEnable: 1
+    sfxVolume: 1
+    sfxPitch: 1
+    sfxRandomVolume: 0
+    sfxRandomPitch: 0
+    sfxLoop: 0
+--- !u!114 &114018202085104582
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1871286449699948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 327952fdde1c2eb44917603015b7d76e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioManager: {fileID: 0}
+  game_state: 0
+  corruption_level: 0
+  corruption_limit: 0
+  corrupted_data: 0
+  chance_of_glitching: 0
+  free_memory_chance: 0
+  score: 0

@@ -110,6 +110,7 @@ public class GameManager : MonoBehaviour {
   {
     if(started_game) {
       game_state = GameState.InGame;
+      AudioManager.PlayMusic("BGM");
       SceneManager.LoadScene(1);
       camera_effects = Camera.main.GetComponent<PostProcessingBehaviour>().profile;
       RestartGraphicProfile();
