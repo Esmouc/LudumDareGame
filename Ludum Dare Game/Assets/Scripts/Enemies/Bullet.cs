@@ -20,7 +20,6 @@ public class Bullet : MonoBehaviour {
 		
 	}
 
-<<<<<<< .mine
   public void UpdateVelocity()
   {
     rb2d = GetComponent<Rigidbody2D> ();
@@ -32,13 +31,10 @@ public class Bullet : MonoBehaviour {
     Destroy(gameObject);
   }
 
-||||||| .r6
-=======
 	void OnCollisionEnter2D (Collision2D col){
 
 		Destroy (this.gameObject);
 
 	}
 
->>>>>>> .r9
 }

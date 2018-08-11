@@ -41,12 +41,12 @@ public class Player : MonoBehaviour {
       if(strafe < 0.5f) {
         transform.rotation = Quaternion.RotateTowards(Quaternion.Euler(0.0f,0.0f,rotation),Quaternion.Euler(0.0f,0.0f,current_angle),rotation_speed * Time.deltaTime * magnitude);
         rotation = transform.rotation.eulerAngles.z;
-        transform.Translate(-transform.up * lineal_speed * magnitude,Space.World);
+        transform.Translate(-transform.up * lineal_speed * magnitude * Time.deltaTime, Space.World);
       } else {
-        transform.Translate(new Vector3(horizontal,-vertical,0.0f) * lineal_speed * magnitude, Space.World);
+        transform.Translate(new Vector3(horizontal,-vertical,0.0f) * lineal_speed * magnitude * Time.deltaTime, Space.World);
       }
     }else{
-      transform.Translate(new Vector3(0.0f,-0.01f), Space.World);
+      transform.Translate(new Vector3(0.0f,-0.5f) * Time.deltaTime, Space.World);
     }
 
     if(shooting && shot_cd >= rof) {
