@@ -49,7 +49,8 @@ public class Player : MonoBehaviour {
         rb.velocity = -transform.up * lineal_speed * magnitude * Time.deltaTime;
       } else {
         //transform.Translate(new Vector3(horizontal,-vertical,0.0f) * lineal_speed * magnitude * Time.deltaTime, Space.World);
-        rb.velocity = new Vector3(horizontal,-vertical,0.0f) * lineal_speed * magnitude * Time.deltaTime;
+        //rb.velocity = new Vector3(horizontal,-vertical,0.0f) * lineal_speed * magnitude * Time.deltaTime;
+		rb.velocity = new Vector3(horizontal,-vertical,0.0f) * lineal_speed * magnitude * Time.deltaTime;
       }
     }else{
       //transform.Translate(new Vector3(0.0f,-0.5f) * Time.deltaTime, Space.World);
