@@ -33,6 +33,10 @@ public class GameManager : MonoBehaviour {
   private bool restart_game;
 
   private PostProcessingProfile camera_effects;
+  ChromaticAberrationModel.Settings aberration_sett;
+  GrainModel.Settings grain_sett;
+  VignetteModel.Settings vignette_sett;
+  BloomModel.Settings bloom_set;
 
 
   private void Awake()
@@ -79,15 +83,21 @@ public class GameManager : MonoBehaviour {
 
   void RestartGraphicProfile()
   {
-    VignetteModel.Settings temp_vignette = camera_effects.vignette.settings;
-    temp_vignette.intensity = 0.0f;
-    camera_effects.vignette.settings = temp_vignette;
-    GrainModel.Settings temp_grain = camera_effects.grain.settings;
-    temp_grain.intensity = 0.0f;
-    camera_effects.grain.settings = temp_grain;
-    ChromaticAberrationModel.Settings temp_aberration = camera_effects.chromaticAberration.settings;
-    temp_aberration.intensity = 0.0f;
-    camera_effects.chromaticAberration.settings = temp_aberration;
+    vignette_sett = camera_effects.vignette.settings;
+    vignette_sett.intensity = 0.0f;
+    camera_effects.vignette.settings = vignette_sett;
+    
+    grain_sett = camera_effects.grain.settings;
+    grain_sett.intensity = 0.0f;
+    camera_effects.grain.settings = grain_sett;
+    
+    aberration_sett = camera_effects.chromaticAberration.settings;
+    aberration_sett.intensity = 0.0f;
+    camera_effects.chromaticAberration.settings = aberration_sett;
+    
+    bloom_set = camera_effects.bloom.settings;
+    bloom_set.bloom.intensity = 0.0f;
+    camera_effects.bloom.settings = bloom_set;
   }
 	
 	// Update is called once per frame
@@ -133,27 +143,19 @@ public class GameManager : MonoBehaviour {
       game_state = GameState.EndMenu;
     }
  
+    // Glitches and some chromatic aberration
+    aberration_sett.intensity = (corruption_level / corruption_limit) * 0.5f;
+    camera_effects.chromaticAberration.settings = aberration_sett;
 
-    if(corruption_level > 1.0f) {
-      // Glitches and some chromatic aberration
-      ChromaticAberrationModel.Settings temp_aberration = camera_effects.chromaticAberration.settings;
-      temp_aberration.intensity = 0.5f;
-      camera_effects.chromaticAberration.settings = temp_aberration;
-    }
+    // More glitches, dithering / grain
+    grain_sett.intensity = (corruption_level / corruption_limit) * 0.5f;
+    camera_effects.grain.settings = grain_sett;
 
-    if(corruption_level > 3.0f) {
-      // More glitches, dithering / grain
-      GrainModel.Settings temp_grain = camera_effects.grain.settings;
-      temp_grain.intensity = 0.3f;
-      camera_effects.grain.settings = temp_grain;
-    }
-
-    if(corruption_level > 7.5f) {
-      // Audio glitches, vignette, bloom
-      VignetteModel.Settings temp_vignette = camera_effects.vignette.settings;
-      temp_vignette.intensity = 0.3f;
-      camera_effects.vignette.settings = temp_vignette;
-    }
+    // Audio glitches, vignette, bloom
+    vignette_sett.intensity = (corruption_level / corruption_limit) * 0.5f;
+    camera_effects.vignette.settings = vignette_sett;
+    bloom_set.bloom.intensity = (corruption_level / corruption_limit) * 1.25f;
+    camera_effects.bloom.settings = bloom_set;
   }
 
   void PauseMenuUpdate()
