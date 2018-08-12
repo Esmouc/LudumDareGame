@@ -49,9 +49,14 @@ public class Trojan : Enemy {
 
 	void OnCollisionEnter2D (Collision2D col){
 
-		if (col.gameObject.tag == "DataPiece" && col.gameObject.GetComponent<Rigidbody2D>().bodyType == RigidbodyType2D.Static) {
-			GameManager.instance.corruption_level += corruptionLevel;
-			rb2d.bodyType = RigidbodyType2D.Static;
+		if (col.gameObject.tag == "DataPiece") {
+			DataPiece dp = col.gameObject.GetComponent<DataPiece> ();
+			if (dp != null){
+				if (dp.landed){
+					GameManager.instance.corruption_level += corruptionLevel;
+					rb2d.bodyType = RigidbodyType2D.Static;
+				}
+			}
 		}
 
 		if (col.gameObject.tag == "Bullet") {
@@ -61,4 +66,11 @@ public class Trojan : Enemy {
 			}
 		}
 	}
+
+	void OnCollisionStay2D (Collision2D col){
+		if (rb2d.bodyType == RigidbodyType2D.Static) {
+			GameManager.instance.corruption_level += corruptionLevel * Time.deltaTime;
+		}
+	}
+
 }

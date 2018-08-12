@@ -204,15 +204,15 @@ public class GameManager : MonoBehaviour {
       changed_music = true;
     }
 	
-	if((corruption_level / corruption_limit) > 0.9f ) {
+	if((corruption_level / corruption_limit) > 0.8f ) {
 		corruptionObject.GetComponent<Animator> ().SetInteger ("CorruptionAnim", 2);
 	}
 
-	if((corruption_level / corruption_limit) > 0.95f ) {
+	if((corruption_level / corruption_limit) > 0.85f ) {
 		corruptionObject.GetComponent<Animator> ().SetInteger ("CorruptionAnim", 3);
 	}
 
-	if((corruption_level / corruption_limit) > 0.98f ) {
+	if((corruption_level / corruption_limit) > 0.9f ) {
 		corruptionObject.GetComponent<Animator> ().SetInteger ("CorruptionAnim", 1);
 	}
 

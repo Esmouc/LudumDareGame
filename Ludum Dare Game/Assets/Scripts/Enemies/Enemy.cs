@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
-	public int lives, corruptionLevel;
+	public int lives;
+	public float corruptionLevel;
 
 	public float speed;
 

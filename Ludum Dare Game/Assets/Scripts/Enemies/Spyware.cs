@@ -32,9 +32,12 @@ public class Spyware : Enemy {
 			Destroy (this.gameObject);
 		
 		if (col.gameObject.tag == "DataPiece") {
-			if (col.gameObject.GetComponent<DataPiece> ().landed){
-				GameManager.instance.corruption_level += corruptionLevel;
-				Destroy (this.gameObject);
+			DataPiece dp = col.gameObject.GetComponent<DataPiece> ();
+			if (dp != null){
+				if (dp.landed){
+					GameManager.instance.corruption_level += corruptionLevel;
+					Destroy (gameObject);
+				}
 			}
 		}
 	}

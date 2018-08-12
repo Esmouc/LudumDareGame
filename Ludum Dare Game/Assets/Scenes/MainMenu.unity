@@ -120,11 +120,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114011252185681254, guid: b3d51577726a7974ebe675c9b4299c85,
-        type: 2}
-      propertyPath: musicArray.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4709640556604816, guid: b3d51577726a7974ebe675c9b4299c85, type: 2}
       propertyPath: m_LocalPosition.x
       value: -1.8909255
@@ -156,46 +151,6 @@ Prefab:
     - target: {fileID: 4709640556604816, guid: b3d51577726a7974ebe675c9b4299c85, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114011252185681254, guid: b3d51577726a7974ebe675c9b4299c85,
-        type: 2}
-      propertyPath: musicArray.Array.data[1].musicName
-      value: BGM_Alternate
-      objectReference: {fileID: 0}
-    - target: {fileID: 114011252185681254, guid: b3d51577726a7974ebe675c9b4299c85,
-        type: 2}
-      propertyPath: musicArray.Array.data[1].musicClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 0fe39b04d4e60b242af303642b645a07, type: 3}
-    - target: {fileID: 114011252185681254, guid: b3d51577726a7974ebe675c9b4299c85,
-        type: 2}
-      propertyPath: musicArray.Array.data[1].musicEnable
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114011252185681254, guid: b3d51577726a7974ebe675c9b4299c85,
-        type: 2}
-      propertyPath: musicArray.Array.data[1].musicVolume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114011252185681254, guid: b3d51577726a7974ebe675c9b4299c85,
-        type: 2}
-      propertyPath: musicArray.Array.data[1].musicPitch
-      value: 1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114011252185681254, guid: b3d51577726a7974ebe675c9b4299c85,
-        type: 2}
-      propertyPath: musicArray.Array.data[1].musicLoop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114011252185681254, guid: b3d51577726a7974ebe675c9b4299c85,
-        type: 2}
-      propertyPath: musicArray.Array.data[1].musicRandomVolume
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 114011252185681254, guid: b3d51577726a7974ebe675c9b4299c85,
-        type: 2}
-      propertyPath: musicArray.Array.data[1].musicRandomPitch
-      value: 0.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d51577726a7974ebe675c9b4299c85, type: 2}

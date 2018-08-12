@@ -65,8 +65,10 @@ public class Centipede : Enemy {
 	void OnCollisionEnter2D (Collision2D col){
 		
 		if (col.gameObject.tag == "DataPiece") {
-			if (col.gameObject.GetComponent<DataPiece> ().landed){
-				GameManager.instance.corruption_level += corruptionLevel;
+			DataPiece dp = col.gameObject.GetComponent<DataPiece> ();
+			if (dp != null){
+				if (dp.landed)
+					GameManager.instance.corruption_level += corruptionLevel;
 			}
 		}
 

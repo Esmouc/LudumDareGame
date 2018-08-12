@@ -61,6 +61,14 @@ MonoBehaviour:
     musicRandomVolume: 0
     musicRandomPitch: 0
     musicLoop: 1
+  - musicName: BGM_Alternate
+    musicClip: {fileID: 8300000, guid: 0fe39b04d4e60b242af303642b645a07, type: 3}
+    musicEnable: 1
+    musicVolume: 1
+    musicPitch: 1.1
+    musicRandomVolume: 0.25
+    musicRandomPitch: 0.25
+    musicLoop: 1
   sfxs:
   - sfxName: 
     sfxClip: {fileID: 0}
@@ -148,15 +156,10 @@ MonoBehaviour:
   AudioManager: {fileID: 0}
   game_state: 0
   corruption_level: 0
-  corruption_limit: 10
+  corruption_limit: 300
   corrupted_data: 0
   chance_of_glitching: 0
   free_memory_chance: 0
   score: 0
   cursor: {fileID: 2800000, guid: 21489f9d19a0030498d52ce0bd589a89, type: 3}
   reticule: {fileID: 2800000, guid: b7668818bf8f8be45b570226a59be853, type: 3}
-  corruptions:
-  - {fileID: 21300000, guid: e8269380975fe4b4bac1c04c09174f85, type: 3}
-  - {fileID: 21300000, guid: 98ec089a6aa5925439c2ca95dde15fa2, type: 3}
-  - {fileID: 21300000, guid: 809af5aa28316ce4886b02c49cc3ee35, type: 3}
-  - {fileID: 21300000, guid: 36310ad56991d064095d890376b1ab71, type: 3}
