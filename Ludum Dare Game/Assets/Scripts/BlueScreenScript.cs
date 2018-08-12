@@ -50,6 +50,18 @@ public class BlueScreenScript : MonoBehaviour {
 			error => { Debug.LogError(error.GenerateErrorReport()); });
 	}	
 
+	public void GetPlayerPosition(){
+		PlayFabClientAPI.GetLeaderboardAroundPlayer( new PlayFab.ClientModels.GetLeaderboardAroundPlayerRequest {
+			// request.Statistics is a list, so multiple StatisticUpdate objects can be defined if required.
+			MaxResultsCount = 1,
+			StatisticName = "Score",
+		},
+			result => { Debug.Log("User statistics updated");
+				playerPosition.text = (result.Leaderboard[0].Position+1).ToString() + ".";
+			},
+			error => { Debug.LogError(error.GenerateErrorReport()); });
+	}
+
 	public void PostScore(int Score){
 
 		PlayFabClientAPI.UpdatePlayerStatistics( new PlayFab.ClientModels.UpdatePlayerStatisticsRequest {
@@ -58,7 +70,8 @@ public class BlueScreenScript : MonoBehaviour {
 				new PlayFab.ClientModels.StatisticUpdate { StatisticName = "Score", Value = Score },
 			}
 		},
-			result => { Debug.Log("User statistics updated"); },
+			result => { Debug.Log("User statistics updated");
+				GetPlayerPosition();},
 			error => { Debug.LogError(error.GenerateErrorReport()); });
 	}
 
