@@ -633,6 +633,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 1104861748897982, guid: 2f1bd800669ff2f4db1494b89f8eb312, type: 2}
+      propertyPath: m_TagString
+      value: Corruption
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f1bd800669ff2f4db1494b89f8eb312, type: 2}
   m_IsPrefabAsset: 0

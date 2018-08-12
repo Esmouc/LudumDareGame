@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour {
   private BloomModel.Settings bloom_set;
 
   private GameObject pause_canvas;
+	private GameObject corruptionObject;
 
 
   private void OnMouseEnter()
@@ -159,7 +160,11 @@ public class GameManager : MonoBehaviour {
       pause_canvas.SetActive(false);
       }
     }
-    
+
+	if(corruptionObject == null) {
+		corruptionObject = GameObject.Find ("Corruption");
+	}
+
     if(camera_effects == null) {
       if((camera_effects = Camera.main.GetComponent<PostProcessingBehaviour>().profile) != null)
         RestartGraphicProfile();
@@ -198,6 +203,18 @@ public class GameManager : MonoBehaviour {
       AudioManager.instance.PlayMusic("BGM_Alternate");
       changed_music = true;
     }
+	
+	if((corruption_level / corruption_limit) > 0.9f ) {
+		corruptionObject.GetComponent<Animator> ().SetInteger ("CorruptionAnim", 2);
+	}
+
+	if((corruption_level / corruption_limit) > 0.95f ) {
+		corruptionObject.GetComponent<Animator> ().SetInteger ("CorruptionAnim", 3);
+	}
+
+	if((corruption_level / corruption_limit) > 0.98f ) {
+		corruptionObject.GetComponent<Animator> ().SetInteger ("CorruptionAnim", 1);
+	}
 
 
     // Graphical glitches
