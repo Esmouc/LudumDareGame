@@ -45,7 +45,7 @@ public class DataPiece : MonoBehaviour {
 			collided = true;
 		}
 
-		if (col.gameObject.tag == "Bullet" && canBeDestroyed) {
+		if (col.gameObject.tag == "PlayerBullet" && canBeDestroyed) {
 			Destroy (gameObject);
 		}
 	}

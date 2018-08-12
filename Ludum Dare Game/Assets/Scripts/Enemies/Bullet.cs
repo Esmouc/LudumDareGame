@@ -29,8 +29,15 @@ public class Bullet : MonoBehaviour {
 
 	void OnCollisionEnter2D (Collision2D col){
 
-		if (col.gameObject.tag != "Bullet" && col.gameObject.tag != "RedBullet")
+		if (gameObject.tag == "PlayerBullet"){
+			if (col.gameObject.tag == "Bullet" || col.gameObject.tag == "RedBullet"){
+				Destroy (this.gameObject);
+			}
+		}
+
+		if (col.gameObject.tag != "Bullet" && col.gameObject.tag != "RedBullet"){
 			Destroy (this.gameObject);
+		}
 
 	}
 

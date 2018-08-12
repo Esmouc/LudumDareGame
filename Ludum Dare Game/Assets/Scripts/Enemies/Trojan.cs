@@ -59,7 +59,7 @@ public class Trojan : Enemy {
 			}
 		}
 
-		if (col.gameObject.tag == "Bullet") {
+		if (col.gameObject.tag == "PlayerBullet") {
 			lives--;
 			if (lives == 0) {
 				Destroy (gameObject);

@@ -29,7 +29,7 @@ public class DividedVirus : Enemy {
 
 	void OnCollisionEnter2D (Collision2D col){
 
-		if (col.gameObject.tag == "Bullet") {
+		if (col.gameObject.tag == "PlayerBullet") {
 
 			lives--;
 
