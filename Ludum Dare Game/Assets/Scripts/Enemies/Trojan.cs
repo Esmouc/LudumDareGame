@@ -6,12 +6,16 @@ public class Trojan : Enemy {
 
 	private Animator animator;
 
+  public Sprite[] sprites;
+
 	// Use this for initialization
 	void Start () {
 
 		animator = GetComponent<Animator> ();
 
 		rb2d.velocity = Vector2.down * speed * Time.deltaTime;
+
+    GetComponent<SpriteRenderer>().sprite = sprites[Random.Range(0,20)];
 
 	}
 
@@ -31,7 +35,7 @@ public class Trojan : Enemy {
 				
 				float distance = Mathf.Abs (hit.point.y - hitStartPos.y);
 
-				distance = distance * 20;
+				distance = distance * 15;
 
 				if (UnityEngine.Random.Range (0, (int)distance) == 0)
 					animator.SetBool ("ToGlitch", true);
