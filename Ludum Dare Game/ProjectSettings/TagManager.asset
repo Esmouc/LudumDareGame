@@ -9,6 +9,7 @@ TagManager:
   - DataPiece
   - FreeData
   - RedBullet
+  - Corruption
   layers:
   - Default
   - TransparentFX
