@@ -47,6 +47,7 @@ public class DataPiece : MonoBehaviour {
 
 		if (col.gameObject.tag == "PlayerBullet" && canBeDestroyed) {
 			Destroy (gameObject);
+      Destroy(Instantiate(Resources.Load("Data Death"),transform.position,Quaternion.identity), 1.0f);
 		}
 	}
 
