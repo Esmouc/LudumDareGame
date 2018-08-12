@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelScene.unity
     guid: de3ba1c23dff48d4b93e1023248c1a5b
+  - enabled: 1
+    path: Assets/Scenes/BlueScreenScene.unity
+    guid: cf9b9d589aca6664296c8c1686c7d1b6
   m_configObjects: {}
