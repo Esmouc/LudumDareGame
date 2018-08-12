@@ -17,6 +17,8 @@ public class Trojan : Enemy {
 
     GetComponent<SpriteRenderer>().sprite = sprites[Random.Range(0,20)];
 
+		gameObject.AddComponent<BoxCollider2D> ();
+
 	}
 
 	// Update is called once per frame

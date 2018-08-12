@@ -24,14 +24,18 @@ public class Spyware : Enemy {
 
 	void OnCollisionEnter2D (Collision2D col){
 
-		lives--;
+		if (col.gameObject.tag == "Bullet") {
+			lives--;
+		}
 
 		if (lives == 0 )
 			Destroy (this.gameObject);
 		
-		if ((col.gameObject.tag == "DataPiece" && col.gameObject.GetComponent<Rigidbody2D> ().bodyType == RigidbodyType2D.Static)){
-			GameManager.instance.corruption_level += corruptionLevel;
-			Destroy (this.gameObject);
+		if (col.gameObject.tag == "DataPiece") {
+			if (col.gameObject.GetComponent<DataPiece> ().landed){
+				GameManager.instance.corruption_level += corruptionLevel;
+				Destroy (this.gameObject);
+			}
 		}
 	}
 }

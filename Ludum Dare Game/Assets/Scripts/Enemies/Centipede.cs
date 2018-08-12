@@ -60,8 +60,10 @@ public class Centipede : Enemy {
 
 	void OnCollisionEnter2D (Collision2D col){
 		
-		if (col.gameObject.tag == "DataPiece" && col.gameObject.GetComponent<Rigidbody2D>().bodyType == RigidbodyType2D.Static) {
-			GameManager.instance.corruption_level += corruptionLevel;
+		if (col.gameObject.tag == "DataPiece") {
+			if (col.gameObject.GetComponent<DataPiece> ().landed){
+				GameManager.instance.corruption_level += corruptionLevel;
+			}
 		}
 
 		if (col.gameObject.tag == "Bullet") {

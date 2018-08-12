@@ -273,7 +273,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &466183335
 GameObject:
@@ -348,7 +348,7 @@ Transform:
   m_LocalScale: {x: 2.104644, y: 2.104644, z: 2.104644}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1069818558
 Prefab:
@@ -387,7 +387,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4709640556604816, guid: b3d51577726a7974ebe675c9b4299c85, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d51577726a7974ebe675c9b4299c85, type: 2}
@@ -434,11 +434,13 @@ MonoBehaviour:
   - {fileID: 1096281891664300, guid: 5ec39f15255375c4faf7fdeb1c5d779e, type: 2}
   Enemies:
   - {fileID: 1347071622028044, guid: 61f0908a682cc0f48b8cb4213f44a359, type: 2}
+  - {fileID: 1307415392733454, guid: ff64e578d2fa28d49835f9b8b8dd8e9b, type: 2}
+  - {fileID: 1322297339352280, guid: 64cc962dfac77cc4d96df196ff39f3d9, type: 2}
   - {fileID: 1486454697530324, guid: df22b61c39db630439a5b0f195f864c2, type: 2}
   - {fileID: 1988928330513390, guid: a1c02260ab92a2c44986f3848926a997, type: 2}
-  - {fileID: 1322297339352280, guid: 64cc962dfac77cc4d96df196ff39f3d9, type: 2}
-  - {fileID: 1307415392733454, guid: ff64e578d2fa28d49835f9b8b8dd8e9b, type: 2}
   - {fileID: 1801454976495748, guid: 783bae4ffdc98484a86a4759902722f1, type: 2}
+  EliminationBox: {fileID: 1046922013580710, guid: 1c0f9779f6a0df040908d96a9c5990f1,
+    type: 2}
 --- !u!50 &1113652562
 Rigidbody2D:
   serializedVersion: 4
@@ -516,7 +518,7 @@ Transform:
   m_LocalScale: {x: 11.367943, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1169187265
 GameObject:

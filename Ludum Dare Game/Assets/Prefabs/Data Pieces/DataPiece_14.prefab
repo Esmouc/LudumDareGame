@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 50459203024213878}
   - component: {fileID: 61426861746042524}
   - component: {fileID: 114878572421740424}
+  - component: {fileID: 95505114710915864}
   m_Layer: 0
   m_Name: DataPiece_14
   m_TagString: DataPiece
@@ -88,6 +89,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.34871906, y: 0.33086258}
   m_EdgeRadius: 0
+--- !u!95 &95505114710915864
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1055443534052182}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 54589efc9a562fc4f9e4b28ad1552228, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114878572421740424
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -100,6 +119,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 100
+  landed: 0
+  landedColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &212247438308938768
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -136,7 +157,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300028, guid: d8b93111b0ac4cf4f9ef0999e05d1341, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.7490196}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

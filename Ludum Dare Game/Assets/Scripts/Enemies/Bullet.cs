@@ -27,12 +27,6 @@ public class Bullet : MonoBehaviour {
 	  }
 
 
-	  public void OnTriggerEnter2D(Collider2D collision)
-	  {
-	    Destroy(gameObject);
-	  }
-
-
 	void OnCollisionEnter2D (Collision2D col){
 
 		if (col.gameObject.tag != "Bullet" && col.gameObject.tag != "RedBullet")

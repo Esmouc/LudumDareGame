@@ -7,6 +7,8 @@ public class LevelManager : MonoBehaviour {
 	public GameObject[] DataPieces;
 	public GameObject[] Enemies;
 
+	public GameObject EliminationBox;
+
 	private int dataPieceChance, enemyChance;
 
 	private int minEnemyDifficulty, maxEnemyDifficulty;
@@ -39,6 +41,14 @@ public class LevelManager : MonoBehaviour {
 				new Vector3 (UnityEngine.Random.Range (transform.position.x - GetComponent<SpriteRenderer> ().bounds.size.x / 2,
 					transform.position.x + GetComponent<SpriteRenderer> ().bounds.size.x / 2), transform.position.y, 0),
 				Quaternion.identity);
+		}
+
+		if (UnityEngine.Random.Range (0,dataPieceChance*3) == 0) {
+
+			Vector3 newPos = new Vector3 (UnityEngine.Random.Range (-3.98f,3.89f), UnityEngine.Random.Range (-3.75f,3.39f), 0 );
+
+			Instantiate (EliminationBox, newPos, Quaternion.identity);
+
 		}
 
 		if (timer > 1.8f) {

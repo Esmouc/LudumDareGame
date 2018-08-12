@@ -17,7 +17,7 @@ public class Shield : MonoBehaviour {
 		
 		shieldResistance--;
 
-		if (col.gameObject.tag == "Bullet") {
+		if (col.gameObject.tag == "Bullet" || col.gameObject.tag == "DataPiece") {
 			
 			GameObject go = (GameObject)Instantiate (Bullet, transform.position + transform.up * 1 / 6, Quaternion.identity);
 			go.GetComponent<Bullet> ().direction = transform.up;
