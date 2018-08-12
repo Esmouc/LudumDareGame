@@ -239,10 +239,10 @@ public class GameManager : MonoBehaviour {
   void EndMenuUpdate()
   {
 	if(Input.GetKeyDown(KeyCode.F8)) {
-      Restart();
-      game_state = GameState.InGame;
+      game_state = GameState.MainMenu;
 	    AudioManager.PlayMusic ("BGM");
       SceneManager.LoadScene(0);
+      Restart();
     }
   }
 
@@ -254,6 +254,7 @@ public class GameManager : MonoBehaviour {
   public void ExitGame()
   {
     exit_game = true;
+    Application.Quit();
   }
 
   public void ContinueGame()
