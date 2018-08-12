@@ -36,10 +36,12 @@ public class GameManager : MonoBehaviour {
   private bool restart_game;
 
   private PostProcessingProfile camera_effects;
-  ChromaticAberrationModel.Settings aberration_sett;
-  GrainModel.Settings grain_sett;
-  VignetteModel.Settings vignette_sett;
-  BloomModel.Settings bloom_set;
+  private ChromaticAberrationModel.Settings aberration_sett;
+  private GrainModel.Settings grain_sett;
+  private VignetteModel.Settings vignette_sett;
+  private BloomModel.Settings bloom_set;
+
+  private GameObject pause_canvas;
 
 
   private void OnMouseEnter()
@@ -76,10 +78,13 @@ public class GameManager : MonoBehaviour {
     corrupted_data = 0;
 
     camera_effects = null;
+    pause_canvas = null;
 	}
 
   void Restart()
   {
+    game_state = GameState.MainMenu;
+
     started_game = false;
     exit_game = false;
     continued_game = false;
@@ -88,6 +93,9 @@ public class GameManager : MonoBehaviour {
     score = 0;
     corruption_level = 0.0f;
     corrupted_data = 0;
+
+    camera_effects = null;
+    pause_canvas = null;
   }
 
   void RestartGraphicProfile()
@@ -132,28 +140,36 @@ public class GameManager : MonoBehaviour {
       AudioManager.PlayMusic("BGM");
       SceneManager.LoadScene(1);
       Cursor.SetCursor(reticule, new Vector2(29,29),CursorMode.Auto);
-      RestartGraphicProfile();
     }
+    Cursor.SetCursor(cursor,new Vector2(35,11),CursorMode.Auto);
   }
 
   void InGameUpdate()
   {
 
+    if(pause_canvas == null) {
+      if((pause_canvas = GameObject.Find("Canvas")) != null) {
+      pause_canvas.SetActive(false);
+      }
+    }
+    
     if(camera_effects == null) {
-      camera_effects = Camera.main.GetComponent<PostProcessingBehaviour>().profile;
-      RestartGraphicProfile();
+      if((camera_effects = Camera.main.GetComponent<PostProcessingBehaviour>().profile) != null)
+        RestartGraphicProfile();
     }
 
     if(Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown("joystick button 7")) {
       game_state = GameState.PauseMenu;
+      pause_canvas.SetActive(true);
       Time.timeScale = 0.0f;
     }
 
     if(corruption_level >= corruption_limit) {
       game_state = GameState.EndMenu;
-		AudioManager.instance.StopMusic ("BGM");
-		AudioManager.instance.PlaySFX ("BlueScreen");
-		SceneManager.LoadScene(2);
+      RestartGraphicProfile();
+		  AudioManager.instance.StopMusic ("BGM");
+		  AudioManager.instance.PlaySFX ("BlueScreen");
+		  SceneManager.LoadScene(2);
     }
  
     // Glitches and some chromatic aberration
@@ -177,6 +193,7 @@ public class GameManager : MonoBehaviour {
       continued_game = false;
       game_state = GameState.InGame;
       Time.timeScale = 1.0f;
+      pause_canvas.SetActive(false);
     }
   }
 
@@ -185,8 +202,8 @@ public class GameManager : MonoBehaviour {
 	if(Input.GetKeyDown(KeyCode.F8)) {
       Restart();
       game_state = GameState.InGame;
-	  AudioManager.PlayMusic ("BGM");
-      SceneManager.LoadScene(1);
+	    AudioManager.PlayMusic ("BGM");
+      SceneManager.LoadScene(0);
     }
   }
 

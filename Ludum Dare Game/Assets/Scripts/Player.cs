@@ -38,7 +38,7 @@ public class Player : MonoBehaviour {
 		float leftMagnitude = new Vector2(leftHorizontal, leftVertical).magnitude;
 		float rightMagnitude = new Vector2(rightHorizontal, rightVertical).magnitude;
 
-		if (Input.GetMouseButton (0)){
+		if (Input.GetMouseButton (0) && GameManager.instance.game_state != GameManager.GameState.PauseMenu){
 			
 			Vector3 mousePos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 			mousePos = new Vector3 (mousePos.x, mousePos.y, 0);
