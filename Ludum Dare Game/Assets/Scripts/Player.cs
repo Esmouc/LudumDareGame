@@ -28,11 +28,16 @@ public class Player : MonoBehaviour {
 
 	    float leftHorizontal = Input.GetAxis("Horizontal");
 	    float leftVertical = -Input.GetAxis("Vertical");
-		float rightHorizontal = Input.GetAxis("Mouse X");
-		float rightVertical = -Input.GetAxis("Mouse Y");
+		  float rightHorizontal = Input.GetAxis("Mouse X");
+		  float rightVertical = -Input.GetAxis("Mouse Y");
 	    float strafe = Input.GetAxis("Strafe");
 	    bool shooting = Input.GetKey("joystick button 2");
 	    if(shooting == false) shooting = Input.GetKey("space");
+
+    if(transform.position.y > 4.4f) {
+      transform.position = new Vector3(transform.position.x,4.4f,transform.position.z);
+      rb.velocity = new Vector2(0.0f,0.0f);
+    }
 
 	    //float magnitude = Mathf.Abs(horizontal) + Mathf.Abs(vertical);
 		float leftMagnitude = new Vector2(leftHorizontal, leftVertical).magnitude;

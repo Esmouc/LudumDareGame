@@ -7,7 +7,7 @@ public class ParticleDestroyer : MonoBehaviour {
   public float time;
 	// Use this for initialization
 	void Start () {
-  Destroy(gameObject,time);
+    Destroy(gameObject,time);
 	}
 	
 	// Update is called once per frame
