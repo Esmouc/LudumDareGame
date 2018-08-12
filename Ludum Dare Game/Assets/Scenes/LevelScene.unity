@@ -695,6 +695,8 @@ MonoBehaviour:
   - {fileID: 1801454976495748, guid: 783bae4ffdc98484a86a4759902722f1, type: 2}
   EliminationBox: {fileID: 1046922013580710, guid: 1c0f9779f6a0df040908d96a9c5990f1,
     type: 2}
+  window_cd: 0
+  window_limit: 6
 --- !u!50 &1113652562
 Rigidbody2D:
   serializedVersion: 4

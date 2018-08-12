@@ -9,7 +9,8 @@ public class LevelManager : MonoBehaviour {
 
 	public GameObject EliminationBox;
 
-	private int dataPieceChance, enemyChance;
+  public float window_cd, window_limit;
+	private int dataPieceChance, enemyChance, windowChance;
 
 	private int minEnemyDifficulty, maxEnemyDifficulty;
 
@@ -17,6 +18,7 @@ public class LevelManager : MonoBehaviour {
 
 	void Start () {
 
+    windowChance = 100000;
 		dataPieceChance = 200;
 		enemyChance = 150;
 		minEnemyDifficulty = 0;
@@ -26,6 +28,8 @@ public class LevelManager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+    
 
 		if (UnityEngine.Random.Range (0,dataPieceChance) == 0) {
 
@@ -43,12 +47,12 @@ public class LevelManager : MonoBehaviour {
 				Quaternion.identity);
 		}
 
-		if (UnityEngine.Random.Range (0,dataPieceChance*3) == 0) {
+		if (UnityEngine.Random.Range(0,windowChance) == 0 || window_cd >= window_limit) {
 
 			Vector3 newPos = new Vector3 (UnityEngine.Random.Range (-3.98f,3.89f), UnityEngine.Random.Range (-3.75f,3.39f), 0 );
 
 			Instantiate (EliminationBox, newPos, Quaternion.identity);
-
+      window_cd = 0.0f;
 		}
 
 		if (timer > 1.8f) {
@@ -76,5 +80,6 @@ public class LevelManager : MonoBehaviour {
 		}
 
 		timer += Time.deltaTime;
+    window_cd += Time.deltaTime;
 	}
 }

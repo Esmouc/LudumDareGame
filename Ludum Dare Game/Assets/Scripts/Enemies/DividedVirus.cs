@@ -44,7 +44,7 @@ public class DividedVirus : Enemy {
 		}
 
 		if (col.gameObject.tag == "DataPiece") {
-			if (col.gameObject.GetComponent<DataPiece> ().landed){
+			if (col.gameObject.GetComponent<DataPiece>().landed){
 				GameManager.instance.corruption_level += corruptionLevel;
 				Destroy (this.gameObject);
 			}

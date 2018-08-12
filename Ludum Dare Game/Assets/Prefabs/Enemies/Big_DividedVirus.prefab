@@ -326,6 +326,7 @@ GameObject:
   - component: {fileID: 50470841764393674}
   - component: {fileID: 58028683398741516}
   - component: {fileID: 114189467158665260}
+  - component: {fileID: 95548224478162712}
   m_Layer: 0
   m_Name: Big_DividedVirus
   m_TagString: Untagged
@@ -477,7 +478,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1988928330513390}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.7658, y: 6.4618, z: -0.05383534}
+  m_LocalPosition: {x: -0.87962955, y: -1.9814668, z: -0.05383534}
   m_LocalScale: {x: 3.022501, y: 3.022501, z: 3.022501}
   m_Children:
   - {fileID: 4145973999058148}
@@ -1039,6 +1040,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.22999999
+--- !u!95 &95548224478162712
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1988928330513390}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4acb6878a5f33cf4ca94cb0d0d7383ef, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114002206378654134
 MonoBehaviour:
   m_ObjectHideFlags: 1
