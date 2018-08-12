@@ -30,7 +30,8 @@ public class MenuController : MonoBehaviour {
       if(selected)
         Exit.Select();
 
-      if(Input.GetKey("joystick button 2")) {
+      if(Input.GetKey("joystick button 0") || Input.GetKey("joystick button 1") || Input.GetKey("joystick button 2") || Input.GetKey("joystick button 3")) {
+        GameManager.instance.mouse_visibility = false;
         if(!selected) GameManager.instance.StartGame();
         if(selected) GameManager.instance.ExitGame();
       }  

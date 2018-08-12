@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour {
   public float corruption_limit;
   public int corrupted_data; // Number of elements accumulated below
 
+  public bool mouse_visibility;
+
   public float chance_of_glitching;
   public float free_memory_chance;
 
@@ -36,6 +38,7 @@ public class GameManager : MonoBehaviour {
   private bool restart_game;
 
   private bool changed_music;
+
 
   private PostProcessingProfile camera_effects;
   private ChromaticAberrationModel.Settings aberration_sett;
@@ -85,6 +88,7 @@ public class GameManager : MonoBehaviour {
     camera_effects = null;
     pause_canvas = null;
     Cursor.SetCursor(cursor,new Vector2(35,11),CursorMode.Auto);
+    mouse_visibility = true;
 	}
 
   void Restart()
@@ -105,6 +109,7 @@ public class GameManager : MonoBehaviour {
     camera_effects = null;
     pause_canvas = null;
     Cursor.SetCursor(null, Vector2.zero,CursorMode.Auto);
+    mouse_visibility = true;
   }
 
   void RestartGraphicProfile()
@@ -148,7 +153,10 @@ public class GameManager : MonoBehaviour {
       game_state = GameState.InGame;
       AudioManager.PlayMusic("BGM");
       SceneManager.LoadScene(1);
-      Cursor.SetCursor(reticule, new Vector2(29,29),CursorMode.Auto);
+  if(mouse_visibility)
+    Cursor.SetCursor(reticule,new Vector2(29,29),CursorMode.Auto);
+  else
+    Cursor.visible = false;
     }
   }
 
