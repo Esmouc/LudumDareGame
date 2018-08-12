@@ -148,8 +148,10 @@ MonoBehaviour:
   AudioManager: {fileID: 0}
   game_state: 0
   corruption_level: 0
-  corruption_limit: 0
+  corruption_limit: 10
   corrupted_data: 0
   chance_of_glitching: 0
   free_memory_chance: 0
   score: 0
+  cursor: {fileID: 2800000, guid: 21489f9d19a0030498d52ce0bd589a89, type: 3}
+  reticule: {fileID: 2800000, guid: b7668818bf8f8be45b570226a59be853, type: 3}

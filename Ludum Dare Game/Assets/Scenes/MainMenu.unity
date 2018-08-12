@@ -113,6 +113,48 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &23708795
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4709640556604816, guid: b3d51577726a7974ebe675c9b4299c85, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.8909255
+      objectReference: {fileID: 0}
+    - target: {fileID: 4709640556604816, guid: b3d51577726a7974ebe675c9b4299c85, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.2094593
+      objectReference: {fileID: 0}
+    - target: {fileID: 4709640556604816, guid: b3d51577726a7974ebe675c9b4299c85, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -14.896885
+      objectReference: {fileID: 0}
+    - target: {fileID: 4709640556604816, guid: b3d51577726a7974ebe675c9b4299c85, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4709640556604816, guid: b3d51577726a7974ebe675c9b4299c85, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4709640556604816, guid: b3d51577726a7974ebe675c9b4299c85, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4709640556604816, guid: b3d51577726a7974ebe675c9b4299c85, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4709640556604816, guid: b3d51577726a7974ebe675c9b4299c85, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b3d51577726a7974ebe675c9b4299c85, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &843292360
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,148 +240,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Play: {fileID: 1106755547}
   Exit: {fileID: 1793079038}
---- !u!1 &992063579
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 992063582}
-  - component: {fileID: 992063581}
-  - component: {fileID: 992063580}
-  m_Layer: 0
-  m_Name: Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &992063580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 992063579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 375fbc43ff06f0442a4a65bf438c9a4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicArray:
-  - musicName: BGM
-    musicClip: {fileID: 8300000, guid: 0fe39b04d4e60b242af303642b645a07, type: 3}
-    musicEnable: 1
-    musicVolume: 1
-    musicPitch: 1
-    musicRandomVolume: 0
-    musicRandomPitch: 0
-    musicLoop: 1
-  sfxs:
-  - sfxName: 
-    sfxClip: {fileID: 0}
-    sfxEnable: 0
-    sfxVolume: 0
-    sfxPitch: 0.5
-    sfxRandomVolume: 0
-    sfxRandomPitch: 0
-    sfxLoop: 0
-  - sfxName: BlueScreen
-    sfxClip: {fileID: 8300000, guid: 07b02bb0f127ecf4d9ad697ba3082d68, type: 3}
-    sfxEnable: 1
-    sfxVolume: 1
-    sfxPitch: 1
-    sfxRandomVolume: 0
-    sfxRandomPitch: 0
-    sfxLoop: 1
-  - sfxName: ButtonSelect
-    sfxClip: {fileID: 8300000, guid: 82ae9d26cce901b40a40a8d85ef16c72, type: 3}
-    sfxEnable: 1
-    sfxVolume: 1
-    sfxPitch: 1
-    sfxRandomVolume: 0
-    sfxRandomPitch: 0
-    sfxLoop: 0
-  - sfxName: EnemyShot
-    sfxClip: {fileID: 8300000, guid: 36dce86dfe799b842a294235cd9f029f, type: 3}
-    sfxEnable: 1
-    sfxVolume: 1
-    sfxPitch: 1
-    sfxRandomVolume: 0
-    sfxRandomPitch: 0
-    sfxLoop: 0
-  - sfxName: Glitch1
-    sfxClip: {fileID: 8300000, guid: ee5c2041fe5a26247829b0e0a6f39e04, type: 3}
-    sfxEnable: 1
-    sfxVolume: 1
-    sfxPitch: 1
-    sfxRandomVolume: 0
-    sfxRandomPitch: 0
-    sfxLoop: 0
-  - sfxName: Glitch2
-    sfxClip: {fileID: 8300000, guid: f99c6ab3fa468c44b9de5a42af6ce160, type: 3}
-    sfxEnable: 1
-    sfxVolume: 1
-    sfxPitch: 1
-    sfxRandomVolume: 0
-    sfxRandomPitch: 0
-    sfxLoop: 0
-  - sfxName: PlayerShot
-    sfxClip: {fileID: 8300000, guid: adb417e757bf37e44a797b89a9435b20, type: 3}
-    sfxEnable: 1
-    sfxVolume: 1
-    sfxPitch: 1
-    sfxRandomVolume: 0
-    sfxRandomPitch: 0
-    sfxLoop: 0
-  - sfxName: TrojanBlink
-    sfxClip: {fileID: 8300000, guid: f8f25281ce7e2154ba40b869aad62b87, type: 3}
-    sfxEnable: 1
-    sfxVolume: 1
-    sfxPitch: 1
-    sfxRandomVolume: 0
-    sfxRandomPitch: 0
-    sfxLoop: 0
-  - sfxName: SubdividedVirus
-    sfxClip: {fileID: 8300000, guid: 06fd6bcc519bfbe44bd47d89142fb28c, type: 3}
-    sfxEnable: 1
-    sfxVolume: 1
-    sfxPitch: 1
-    sfxRandomVolume: 0
-    sfxRandomPitch: 0
-    sfxLoop: 0
---- !u!114 &992063581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 992063579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 327952fdde1c2eb44917603015b7d76e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AudioManager: {fileID: 0}
-  game_state: 0
-  corruption_level: 0
-  corruption_limit: 1000
-  corrupted_data: 0
-  chance_of_glitching: 0
-  free_memory_chance: 0
-  score: 0
---- !u!4 &992063582
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 992063579}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.8909255, y: 1.2094593, z: -14.896885}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1069753831
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,7 +392,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 992063581}
+      - m_Target: {fileID: 1294793832}
         m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
@@ -502,18 +402,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 992063580}
-        m_MethodName: PlaySFX
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: ButtonSelect
-          m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1106755548
@@ -550,6 +439,12 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1106755545}
   m_CullTransparentMesh: 0
+--- !u!114 &1294793832 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114018202085104582, guid: b3d51577726a7974ebe675c9b4299c85,
+    type: 2}
+  m_PrefabInternal: {fileID: 23708795}
+  m_Script: {fileID: 11500000, guid: 327952fdde1c2eb44917603015b7d76e, type: 3}
 --- !u!1 &1534750968
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,7 +614,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 992063581}
+      - m_Target: {fileID: 1294793832}
         m_MethodName: ExitGame
         m_Mode: 1
         m_Arguments:
@@ -729,18 +624,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 992063580}
-        m_MethodName: PlaySFX
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: ButtonSelect
-          m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1793079039

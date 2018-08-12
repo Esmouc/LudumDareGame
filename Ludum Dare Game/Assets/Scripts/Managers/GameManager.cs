@@ -27,6 +27,9 @@ public class GameManager : MonoBehaviour {
 
   public int score;
 
+  public Texture2D cursor;
+  public Texture2D reticule;
+
   private bool started_game;
   private bool exit_game;
   private bool continued_game;
@@ -37,6 +40,12 @@ public class GameManager : MonoBehaviour {
   GrainModel.Settings grain_sett;
   VignetteModel.Settings vignette_sett;
   BloomModel.Settings bloom_set;
+
+
+  private void OnMouseEnter()
+  {
+    Cursor.SetCursor(cursor,new Vector2(35,11),CursorMode.Auto);
+  }
 
 
   private void Awake()
@@ -122,6 +131,7 @@ public class GameManager : MonoBehaviour {
       game_state = GameState.InGame;
       AudioManager.PlayMusic("BGM");
       SceneManager.LoadScene(1);
+      Cursor.SetCursor(reticule, new Vector2(29,29),CursorMode.Auto);
       RestartGraphicProfile();
     }
   }
