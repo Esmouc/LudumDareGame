@@ -75,7 +75,9 @@ public class Trojan : Enemy {
 		if (col.gameObject.tag == "PlayerBullet") {
 			lives--;
 			if (lives == 0) {
-				GameManager.instance.score += score;
+        GameManager.instance.score += score;
+        Instantiate(Resources.Load("CentipedeExplosion"),transform.position,Quaternion.identity);
+        GameManager.instance.AudioManager.PlaySFX("Explosion");
 				Destroy (gameObject);
 			}
 		}

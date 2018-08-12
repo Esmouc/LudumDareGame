@@ -157,10 +157,8 @@ private bool started_game;
       game_state = GameState.InGame;
       AudioManager.PlayMusic("BGM");
       SceneManager.LoadScene(1);
-  if(mouse_visibility)
-    Cursor.SetCursor(reticule,new Vector2(29,29),CursorMode.Auto);
-  else
-    Cursor.visible = false;
+      if(mouse_visibility)Cursor.SetCursor(reticule, new Vector2(29,29),CursorMode.Auto);
+      else Cursor.visible = false;
     }
   }
 
@@ -195,8 +193,9 @@ private bool started_game;
     if(corruption_level >= corruption_limit) {
       game_state = GameState.EndMenu;
       RestartGraphicProfile();
-		  AudioManager.instance.StopMusic ("BGM");
-		  AudioManager.instance.PlaySFX ("BlueScreen");
+		  AudioManager.instance.StopMusic("BGM");
+      AudioManager.instance.StopMusic("BGM_Alternate");
+		  AudioManager.instance.PlaySFX("BlueScreen");
 		  SceneManager.LoadScene(2);
     }
  

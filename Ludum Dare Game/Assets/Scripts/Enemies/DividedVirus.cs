@@ -41,6 +41,11 @@ public class DividedVirus : Enemy {
         GameManager.instance.AudioManager.PlaySFX("SubdividedVirus"); 
 				GameManager.instance.score += score;
 				Destroy (this.gameObject);
+
+        GameObject ps = null;
+        if(corruptionLevel == 4) ps = Instantiate(Resources.Load("Large Divide"), transform.position, Quaternion.identity) as GameObject;
+        if(corruptionLevel == 3) ps = Instantiate(Resources.Load("Medium Divide"), transform.position, Quaternion.identity) as GameObject;
+        if(corruptionLevel == 1) ps = Instantiate(Resources.Load("Small Death"), transform.position, Quaternion.identity) as GameObject;
 			}
 
 		}

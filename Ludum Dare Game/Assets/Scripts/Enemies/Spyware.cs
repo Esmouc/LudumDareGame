@@ -29,7 +29,8 @@ public class Spyware : Enemy {
 		}
 
 		if (lives == 0 ){
-			GameManager.instance.score += score;
+      Instantiate(Resources.Load("CentipedeExplosion"),transform.position,Quaternion.identity);
+      GameManager.instance.AudioManager.PlaySFX("Explosion");
 			Destroy (this.gameObject);
 		}
 		
@@ -37,6 +38,7 @@ public class Spyware : Enemy {
 			DataPiece dp = col.gameObject.GetComponent<DataPiece> ();
 			if (dp != null){
 				if (dp.landed){
+          GameManager.instance.score += score;
 					GameManager.instance.corruption_level += corruptionLevel;
 					Destroy (gameObject);
 				}
