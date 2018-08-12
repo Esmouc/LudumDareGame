@@ -75,6 +75,7 @@ public class Centipede : Enemy {
 		if (col.gameObject.tag == "PlayerBullet") {
 			lives--;
 			if (lives == 0) {
+				GameManager.instance.score += score;
 				for (int i = 0; i < 10; i++){
 					
 					GameObject go = (GameObject)Instantiate (Bullet, transform.position, Quaternion.identity);

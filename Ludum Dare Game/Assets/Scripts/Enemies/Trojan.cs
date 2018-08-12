@@ -75,6 +75,7 @@ public class Trojan : Enemy {
 		if (col.gameObject.tag == "PlayerBullet") {
 			lives--;
 			if (lives == 0) {
+				GameManager.instance.score += score;
 				Destroy (gameObject);
 			}
 		}

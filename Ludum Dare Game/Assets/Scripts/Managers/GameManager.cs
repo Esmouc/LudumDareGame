@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.PostProcessing;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
@@ -32,7 +33,10 @@ public class GameManager : MonoBehaviour {
   public Texture2D cursor;
   public Texture2D reticule;
 
-  private bool started_game;
+
+	private float scoreTimer= 0.0f;
+
+private bool started_game;
   private bool exit_game;
   private bool continued_game;
   private bool restart_game;
@@ -48,7 +52,7 @@ public class GameManager : MonoBehaviour {
 
   private GameObject pause_canvas;
 	private GameObject corruptionObject;
-
+	private Text ScoreText;
 
   private void OnMouseEnter()
   {
@@ -168,6 +172,10 @@ public class GameManager : MonoBehaviour {
       pause_canvas.SetActive(false);
       }
     }
+	
+	if(ScoreText == null) {
+			ScoreText = GameObject.Find ("ScoreText").GetComponent<Text>();
+	}
 
 	if(corruptionObject == null) {
 		corruptionObject = GameObject.Find ("Corruption");
@@ -224,7 +232,15 @@ public class GameManager : MonoBehaviour {
 		corruptionObject.GetComponent<Animator> ().SetInteger ("CorruptionAnim", 1);
 	}
 
+	
+		ScoreText.text = score.ToString ();
 
+		scoreTimer += Time.deltaTime;
+
+		if (scoreTimer >= 1.0f){
+			score += 20;
+			scoreTimer = 0;
+		}
     // Graphical glitches
     /*if((corruption_level / corruption_limit) > 0.5f) {
       // Starts at 5%, then scales up to 9%

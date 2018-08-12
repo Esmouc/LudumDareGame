@@ -775,6 +775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 1
+  score: 200
   corruptionLevel: 3
   speed: 60
   shieldSpeed: 200

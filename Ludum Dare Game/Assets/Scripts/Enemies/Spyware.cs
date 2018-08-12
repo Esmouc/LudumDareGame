@@ -28,8 +28,10 @@ public class Spyware : Enemy {
 			lives--;
 		}
 
-		if (lives == 0 )
+		if (lives == 0 ){
+			GameManager.instance.score += score;
 			Destroy (this.gameObject);
+		}
 		
 		if (col.gameObject.tag == "DataPiece") {
 			DataPiece dp = col.gameObject.GetComponent<DataPiece> ();

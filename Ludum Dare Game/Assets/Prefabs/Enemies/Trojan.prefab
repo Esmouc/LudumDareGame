@@ -123,6 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 3
+  score: 100
   corruptionLevel: 0.5
   speed: 0
   sprites:

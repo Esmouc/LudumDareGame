@@ -274,6 +274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 1
+  score: 0
   corruptionLevel: 1
   speed: 120
   rotation_velocity: 5
@@ -291,6 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 1
+  score: 0
   corruptionLevel: 1
   speed: 120
   rotation_velocity: 5
@@ -308,6 +310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 2
+  score: 150
   corruptionLevel: 3
   speed: 80
   rotation_velocity: 2

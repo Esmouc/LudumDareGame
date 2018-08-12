@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4709640556604816}
   - component: {fileID: 114018202085104582}
   - component: {fileID: 114011252185681254}
+  - component: {fileID: 114034469146789830}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -156,10 +157,22 @@ MonoBehaviour:
   AudioManager: {fileID: 0}
   game_state: 0
   corruption_level: 0
-  corruption_limit: 300
+  corruption_limit: 20
   corrupted_data: 0
+  mouse_visibility: 0
   chance_of_glitching: 0
   free_memory_chance: 0
   score: 0
   cursor: {fileID: 2800000, guid: 21489f9d19a0030498d52ce0bd589a89, type: 3}
   reticule: {fileID: 2800000, guid: b7668818bf8f8be45b570226a59be853, type: 3}
+--- !u!114 &114034469146789830
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1871286449699948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53b2db7a1452ee644800ffde5e5328ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
