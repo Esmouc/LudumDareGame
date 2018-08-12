@@ -601,6 +601,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114011252185681254, guid: b3d51577726a7974ebe675c9b4299c85,
+        type: 2}
+      propertyPath: sfxs.Array.size
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4709640556604816, guid: b3d51577726a7974ebe675c9b4299c85, type: 2}
       propertyPath: m_LocalPosition.x
       value: -1.8909255
@@ -632,6 +637,96 @@ Prefab:
     - target: {fileID: 4709640556604816, guid: b3d51577726a7974ebe675c9b4299c85, type: 2}
       propertyPath: m_RootOrder
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114011252185681254, guid: b3d51577726a7974ebe675c9b4299c85,
+        type: 2}
+      propertyPath: sfxs.Array.data[0].sfxClip
+      value: 
+      objectReference: {fileID: 8300000, guid: de79cef44887115498c2b4c8f05a49c1, type: 3}
+    - target: {fileID: 114011252185681254, guid: b3d51577726a7974ebe675c9b4299c85,
+        type: 2}
+      propertyPath: sfxs.Array.data[0].sfxName
+      value: Explosion
+      objectReference: {fileID: 0}
+    - target: {fileID: 114011252185681254, guid: b3d51577726a7974ebe675c9b4299c85,
+        type: 2}
+      propertyPath: sfxs.Array.data[0].sfxEnable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114011252185681254, guid: b3d51577726a7974ebe675c9b4299c85,
+        type: 2}
+      propertyPath: sfxs.Array.data[0].sfxVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114011252185681254, guid: b3d51577726a7974ebe675c9b4299c85,
+        type: 2}
+      propertyPath: sfxs.Array.data[0].sfxPitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114011252185681254, guid: b3d51577726a7974ebe675c9b4299c85,
+        type: 2}
+      propertyPath: sfxs.Array.data[9].sfxName
+      value: CentipedeSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 114011252185681254, guid: b3d51577726a7974ebe675c9b4299c85,
+        type: 2}
+      propertyPath: sfxs.Array.data[9].sfxClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4cfc6b594b23a8345a4f1b465718b3d7, type: 3}
+    - target: {fileID: 114011252185681254, guid: b3d51577726a7974ebe675c9b4299c85,
+        type: 2}
+      propertyPath: sfxs.Array.data[9].sfxEnable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114011252185681254, guid: b3d51577726a7974ebe675c9b4299c85,
+        type: 2}
+      propertyPath: sfxs.Array.data[9].sfxVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114011252185681254, guid: b3d51577726a7974ebe675c9b4299c85,
+        type: 2}
+      propertyPath: sfxs.Array.data[9].sfxPitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114011252185681254, guid: b3d51577726a7974ebe675c9b4299c85,
+        type: 2}
+      propertyPath: sfxs.Array.data[10].sfxName
+      value: SubdividedVirus
+      objectReference: {fileID: 0}
+    - target: {fileID: 114011252185681254, guid: b3d51577726a7974ebe675c9b4299c85,
+        type: 2}
+      propertyPath: sfxs.Array.data[10].sfxClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 06fd6bcc519bfbe44bd47d89142fb28c, type: 3}
+    - target: {fileID: 114011252185681254, guid: b3d51577726a7974ebe675c9b4299c85,
+        type: 2}
+      propertyPath: sfxs.Array.data[10].sfxEnable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114011252185681254, guid: b3d51577726a7974ebe675c9b4299c85,
+        type: 2}
+      propertyPath: sfxs.Array.data[10].sfxVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114011252185681254, guid: b3d51577726a7974ebe675c9b4299c85,
+        type: 2}
+      propertyPath: sfxs.Array.data[10].sfxPitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114011252185681254, guid: b3d51577726a7974ebe675c9b4299c85,
+        type: 2}
+      propertyPath: sfxs.Array.data[3].sfxRandomPitch
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114011252185681254, guid: b3d51577726a7974ebe675c9b4299c85,
+        type: 2}
+      propertyPath: sfxs.Array.data[6].sfxRandomPitch
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114011252185681254, guid: b3d51577726a7974ebe675c9b4299c85,
+        type: 2}
+      propertyPath: sfxs.Array.data[6].sfxVolume
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d51577726a7974ebe675c9b4299c85, type: 2}

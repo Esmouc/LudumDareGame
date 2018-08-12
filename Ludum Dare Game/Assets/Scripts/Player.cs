@@ -47,6 +47,7 @@ public class Player : MonoBehaviour {
 			rotation = transform.rotation.eulerAngles.z;
 
 			if (shot_cd >= rof) {
+        GameManager.instance.AudioManager.PlaySFX("PlayerShot");  
 				GameObject temp_bullet = Instantiate(bullet, transform.position - transform.up/2.5f, Quaternion.Euler(0.0f, 0.0f, rotation));
 				temp_bullet.GetComponent<Bullet>().direction = -transform.up;
 				temp_bullet.GetComponent<Bullet>().speed = base_bullet_speed + lineal_speed * leftMagnitude;
@@ -75,6 +76,7 @@ public class Player : MonoBehaviour {
 			transform.rotation = Quaternion.RotateTowards(Quaternion.Euler(0.0f,0.0f,rotation),Quaternion.Euler(0.0f,0.0f,current_angle),rotation_speed * Time.deltaTime * rightMagnitude);
 		
 			if (shot_cd >= rof) {
+        GameManager.instance.AudioManager.PlaySFX("PlayerShot");  
 				GameObject temp_bullet = Instantiate(bullet, transform.position - transform.up/2.5f, Quaternion.Euler(0.0f, 0.0f, rotation));
 				temp_bullet.GetComponent<Bullet>().direction = -transform.up;
 				temp_bullet.GetComponent<Bullet>().speed = base_bullet_speed + lineal_speed * leftMagnitude;

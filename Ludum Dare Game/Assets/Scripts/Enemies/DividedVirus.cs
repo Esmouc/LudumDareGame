@@ -38,6 +38,7 @@ public class DividedVirus : Enemy {
 					subViruses.SetActive (true);
 					subViruses.transform.parent = null;
 				}
+        GameManager.instance.AudioManager.PlaySFX("SubdividedVirus");  
 				Destroy (this.gameObject);
 			}
 

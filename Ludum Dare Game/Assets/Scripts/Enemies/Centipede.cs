@@ -78,12 +78,15 @@ public class Centipede : Enemy {
 				for (int i = 0; i < 10; i++){
 					
 					GameObject go = (GameObject)Instantiate (Bullet, transform.position, Quaternion.identity);
+          GameManager.instance.AudioManager.PlaySFX("EnemyShot");  
 					go.transform.Rotate (new Vector3 (0, 0, 36) * i);
 					go.GetComponent<Bullet> ().direction = go.transform.up;
 					go.transform.position += go.transform.up / 3;
 					go.GetComponent<Bullet> ().UpdateVelocity ();
 
 				}
+        Instantiate(Resources.Load("CentipedeExplosion"),transform.position,Quaternion.identity);
+        GameManager.instance.AudioManager.PlaySFX("Explosion");
 				Destroy (gameObject);
 			}
 		}

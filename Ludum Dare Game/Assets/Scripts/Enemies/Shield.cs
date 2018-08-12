@@ -19,6 +19,7 @@ public class Shield : MonoBehaviour {
 
 		if (col.gameObject.tag == "PlayerBullet" || col.gameObject.tag == "DataPiece") {
 			
+      GameManager.instance.AudioManager.PlaySFX("EnemyShot");  
 			GameObject go = (GameObject)Instantiate (Bullet, transform.position + transform.up * 1 / 4, Quaternion.identity);
 			go.GetComponent<Bullet> ().direction = transform.up;
 			go.GetComponent<Bullet> ().UpdateVelocity ();

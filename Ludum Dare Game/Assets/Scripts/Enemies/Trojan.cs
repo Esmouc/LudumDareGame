@@ -8,6 +8,9 @@ public class Trojan : Enemy {
 
   public Sprite[] sprites;
 
+  private float cd_sound;
+  private float limit_sound;
+
 	// Use this for initialization
 	void Start () {
 
@@ -19,10 +22,15 @@ public class Trojan : Enemy {
 
 		gameObject.AddComponent<BoxCollider2D> ();
 
+    cd_sound = 0.0f;
+    limit_sound = 0.5f;
+
 	}
 
 	// Update is called once per frame
 	void Update () {
+
+    cd_sound += Time.deltaTime;
 
 		if (animator.GetBool("ToGlitch"))
 			animator.SetBool ("ToGlitch", false);
@@ -39,8 +47,13 @@ public class Trojan : Enemy {
 
 				distance = distance * 15;
 
-				if (UnityEngine.Random.Range (0, (int)distance) == 0)
+        if(UnityEngine.Random.Range(0,(int)distance) == 0) {
 					animator.SetBool ("ToGlitch", true);
+          if(cd_sound > limit_sound) {
+            GameManager.instance.AudioManager.PlaySFX("TrojanBlink");
+            cd_sound = 0.0f;
+          }
+        }
 			}
 
 		}
