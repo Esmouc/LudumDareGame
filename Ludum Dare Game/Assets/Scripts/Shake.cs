@@ -40,13 +40,7 @@ public class Shake : MonoBehaviour {
 
     public void Shaking(float in_intensity){
         isShaking = true;
-        shakes = 10;
+        shakes = 5;
         intensity = in_intensity;
-    }
-
-    public void Bomb(float in_intensity){
-    isShaking = true;
-    shakes = 50;
-    intensity = in_intensity;
     }
 }

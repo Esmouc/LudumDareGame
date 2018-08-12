@@ -88,6 +88,7 @@ public class Centipede : Enemy {
 				}
         Instantiate(Resources.Load("CentipedeExplosion"),transform.position,Quaternion.identity);
         GameManager.instance.AudioManager.PlaySFX("Explosion");
+        Camera.main.GetComponent<Shake>().Shaking(0.3f);
 				Destroy (gameObject);
 			}
 		}

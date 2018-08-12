@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4432289037486206}
   - component: {fileID: 198265194608680726}
+  - component: {fileID: 114332420408475826}
   - component: {fileID: 199435179432068646}
   m_Layer: 0
   m_Name: Data Death
@@ -35,12 +36,24 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1142449685733440}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.62, y: 2.63, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114332420408475826
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1142449685733440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 168573500fa3af84db0e2ac82b269c1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 1
 --- !u!198 &198265194608680726
 ParticleSystem:
   m_ObjectHideFlags: 1

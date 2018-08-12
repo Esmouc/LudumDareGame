@@ -78,6 +78,7 @@ public class Trojan : Enemy {
         GameManager.instance.score += score;
         Instantiate(Resources.Load("CentipedeExplosion"),transform.position,Quaternion.identity);
         GameManager.instance.AudioManager.PlaySFX("Explosion");
+        Camera.main.GetComponent<Shake>().Shaking(0.1f);
 				Destroy (gameObject);
 			}
 		}

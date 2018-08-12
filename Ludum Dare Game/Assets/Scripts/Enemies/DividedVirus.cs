@@ -33,19 +33,27 @@ public class DividedVirus : Enemy {
 
 			lives--;
 
-			if (lives == 0) {
-				if (CanDivide) {
-					subViruses.SetActive (true);
-					subViruses.transform.parent = null;
-				}
-        GameManager.instance.AudioManager.PlaySFX("SubdividedVirus"); 
-				GameManager.instance.score += score;
-				Destroy (this.gameObject);
+    if(lives == 0) {
+    if(CanDivide) {
+    subViruses.SetActive(true);
+    subViruses.transform.parent = null;
+    }
+    GameManager.instance.AudioManager.PlaySFX("SubdividedVirus");
+    GameManager.instance.score += score;
+    Destroy(this.gameObject);
 
-        GameObject ps = null;
-        if(corruptionLevel == 4) ps = Instantiate(Resources.Load("Large Divide"), transform.position, Quaternion.identity) as GameObject;
-        if(corruptionLevel == 3) ps = Instantiate(Resources.Load("Medium Divide"), transform.position, Quaternion.identity) as GameObject;
-        if(corruptionLevel == 1) ps = Instantiate(Resources.Load("Small Death"), transform.position, Quaternion.identity) as GameObject;
+    GameObject ps = null;
+    if(corruptionLevel == 4) {
+      ps = Instantiate(Resources.Load("Large Divide"),transform.position,Quaternion.identity) as GameObject;
+      Camera.main.GetComponent<Shake>().Shaking(0.2f);
+    }
+    if(corruptionLevel == 3) {
+      ps = Instantiate(Resources.Load("Medium Divide"),transform.position,Quaternion.identity) as GameObject;
+      Camera.main.GetComponent<Shake>().Shaking(0.05f);
+    }
+    if(corruptionLevel == 1) {
+      ps = Instantiate(Resources.Load("Small Death"),transform.position,Quaternion.identity) as GameObject;
+    }
 			}
 
 		}

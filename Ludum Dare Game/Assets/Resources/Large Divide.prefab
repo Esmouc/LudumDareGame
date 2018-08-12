@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4146433074108724}
   - component: {fileID: 198730329520562028}
+  - component: {fileID: 114356152697678106}
   - component: {fileID: 199111079313762138}
   m_Layer: 0
   m_Name: Large Divide
@@ -41,6 +42,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114356152697678106
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1096174576334334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 168573500fa3af84db0e2ac82b269c1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 1
 --- !u!198 &198730329520562028
 ParticleSystem:
   m_ObjectHideFlags: 1

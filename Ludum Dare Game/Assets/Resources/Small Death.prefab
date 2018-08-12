@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4169996629556288}
   - component: {fileID: 198879556704227332}
+  - component: {fileID: 114871734304392832}
   - component: {fileID: 199480063156747968}
   m_Layer: 0
   m_Name: Small Death
@@ -41,6 +42,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114871734304392832
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1975264283891130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 168573500fa3af84db0e2ac82b269c1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 1
 --- !u!198 &198879556704227332
 ParticleSystem:
   m_ObjectHideFlags: 1

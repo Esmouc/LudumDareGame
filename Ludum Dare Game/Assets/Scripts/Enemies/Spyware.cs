@@ -31,6 +31,7 @@ public class Spyware : Enemy {
 		if (lives == 0 ){
       Instantiate(Resources.Load("CentipedeExplosion"),transform.position,Quaternion.identity);
       GameManager.instance.AudioManager.PlaySFX("Explosion");
+      Camera.main.GetComponent<Shake>().Shaking(0.2f);
 			Destroy (this.gameObject);
 		}
 		
