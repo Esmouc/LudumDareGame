@@ -28,6 +28,7 @@ public class Centipede : Enemy {
       head = false;
       GameObject go_body = null;
       GameObject previous_go = gameObject;
+      GetComponent<Animator>().enabled = false;
       for(int i = 0; i < number_of_bodies; ++i) {
         go_body = Instantiate(gameObject, transform.position + new Vector3(0.0f, 0.5f + i * 0.5f, 0.0f), Quaternion.identity);
         go_body.GetComponent<Centipede>().dormant = true;
@@ -36,6 +37,7 @@ public class Centipede : Enemy {
         previous_go = go_body;
       }
       GetComponent<CentipedeBody>().enabled = false;
+      GetComponent<Animator>().enabled = true;
     }
 
 	}
@@ -46,6 +48,8 @@ public class Centipede : Enemy {
       /*transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(new Vector3(0.0f, 0.0f, angle_limit)), rotation_velocity * Time.deltaTime);
       if(Mathf.Approximately(transform.rotation.eulerAngles.z,360.0f - Mathf.Abs(angle_limit)) ||
         Mathf.Approximately(transform.rotation.eulerAngles.z, angle_limit)) angle_limit *= -1;*/
+
+      if(GetComponent<Animator>().enabled == false) GetComponent<Animator>().enabled = true;
 
       transform.rotation = Quaternion.RotateTowards(transform.rotation,Quaternion.Euler(random_target),rotation_velocity * Time.deltaTime);
       if(transform.rotation == Quaternion.Euler(random_target)) random_target = new Vector3(0.0f, 0.0f, Random.Range(-45.0f, 45.0f));

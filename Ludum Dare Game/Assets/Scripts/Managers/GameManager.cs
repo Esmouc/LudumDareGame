@@ -35,6 +35,8 @@ public class GameManager : MonoBehaviour {
   private bool continued_game;
   private bool restart_game;
 
+  private bool changed_music;
+
   private PostProcessingProfile camera_effects;
   private ChromaticAberrationModel.Settings aberration_sett;
   private GrainModel.Settings grain_sett;
@@ -73,12 +75,15 @@ public class GameManager : MonoBehaviour {
     continued_game = false;
     restart_game = false;
 
+    changed_music = false;
+
     score = 0;
     corruption_level = 0.0f;
     corrupted_data = 0;
 
     camera_effects = null;
     pause_canvas = null;
+    Cursor.SetCursor(cursor,new Vector2(35,11),CursorMode.Auto);
 	}
 
   void Restart()
@@ -90,12 +95,15 @@ public class GameManager : MonoBehaviour {
     continued_game = false;
     restart_game = false;
 
+    changed_music = false;
+
     score = 0;
     corruption_level = 0.0f;
     corrupted_data = 0;
 
     camera_effects = null;
     pause_canvas = null;
+    Cursor.SetCursor(null, Vector2.zero,CursorMode.Auto);
   }
 
   void RestartGraphicProfile()
@@ -141,7 +149,6 @@ public class GameManager : MonoBehaviour {
       SceneManager.LoadScene(1);
       Cursor.SetCursor(reticule, new Vector2(29,29),CursorMode.Auto);
     }
-    Cursor.SetCursor(cursor,new Vector2(35,11),CursorMode.Auto);
   }
 
   void InGameUpdate()
@@ -185,6 +192,21 @@ public class GameManager : MonoBehaviour {
     camera_effects.vignette.settings = vignette_sett;
     bloom_set.bloom.intensity = (corruption_level / corruption_limit) * 1.25f;
     camera_effects.bloom.settings = bloom_set;
+
+    if((corruption_level / corruption_limit) > 0.75f && changed_music == false) {
+      AudioManager.instance.StopMusic("BGM");
+      AudioManager.instance.PlayMusic("BGM_Alternate");
+      changed_music = true;
+    }
+
+
+    // Graphical glitches
+    /*if((corruption_level / corruption_limit) > 0.5f) {
+      // Starts at 5%, then scales up to 9%
+      if(Random.Range(0,100) < 10 * (int)(corruption_level / corruption_limit)) {
+        Destroy(Instantiate(,new Vector3(Random.Range(0,1440),Random.Range(0,1080),0.0f), Quaternion.identity), 2.0f);
+      }
+    }*/
   }
 
   void PauseMenuUpdate()
