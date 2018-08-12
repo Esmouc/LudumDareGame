@@ -676,6 +676,16 @@ MonoBehaviour:
   - {fileID: 1799412068670304, guid: f3f837b847ee59745be005865a9b29b1, type: 2}
   - {fileID: 1731932620970186, guid: 9ae9596fa4745c14eadaa906e92ffb50, type: 2}
   - {fileID: 1096281891664300, guid: 5ec39f15255375c4faf7fdeb1c5d779e, type: 2}
+  - {fileID: 1779780810722980, guid: 8938c1c0cac08aa46afe9baf198c077e, type: 2}
+  - {fileID: 1754506816676808, guid: a35418bc571290a4cab4fc4eb888c8a5, type: 2}
+  - {fileID: 1625429486162938, guid: 3a5bcc44250adbd4fbbf54825ecd5c4e, type: 2}
+  - {fileID: 1055443534052182, guid: 666466882bea92a439bdab70554352e7, type: 2}
+  - {fileID: 1986252520506298, guid: 16f827a2e46065a4791d7fc9e4f98171, type: 2}
+  - {fileID: 1698999517067352, guid: 3fbf55e394ed3b24c861c3342a2ddc97, type: 2}
+  - {fileID: 1214064651453482, guid: 11ac56ebe2e378f44a3a891d92537b5b, type: 2}
+  - {fileID: 1239695263313602, guid: a2f98a07bf68c3c4f94bc476d08d9f99, type: 2}
+  - {fileID: 1299700582925250, guid: a915a0ce924879f4c919922b4bf1f34d, type: 2}
+  - {fileID: 1114274212549276, guid: b565d10a5ea2064438af2a8f224e8fb1, type: 2}
   Enemies:
   - {fileID: 1347071622028044, guid: 61f0908a682cc0f48b8cb4213f44a359, type: 2}
   - {fileID: 1307415392733454, guid: ff64e578d2fa28d49835f9b8b8dd8e9b, type: 2}
@@ -683,6 +693,8 @@ MonoBehaviour:
   - {fileID: 1486454697530324, guid: df22b61c39db630439a5b0f195f864c2, type: 2}
   - {fileID: 1988928330513390, guid: a1c02260ab92a2c44986f3848926a997, type: 2}
   - {fileID: 1801454976495748, guid: 783bae4ffdc98484a86a4759902722f1, type: 2}
+  EliminationBox: {fileID: 1046922013580710, guid: 1c0f9779f6a0df040908d96a9c5990f1,
+    type: 2}
 --- !u!50 &1113652562
 Rigidbody2D:
   serializedVersion: 4
