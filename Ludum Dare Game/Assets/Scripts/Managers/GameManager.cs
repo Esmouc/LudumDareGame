@@ -156,7 +156,7 @@ private bool started_game;
     if(started_game) {
       game_state = GameState.InGame;
       AudioManager.PlayMusic("BGM");
-      SceneManager.LoadScene(1);
+      SceneManager.LoadScene(2);
       if(mouse_visibility)Cursor.SetCursor(reticule, new Vector2(29,29),CursorMode.Auto);
       else Cursor.visible = false;
     }
@@ -196,7 +196,7 @@ private bool started_game;
 		  AudioManager.instance.StopMusic("BGM");
       AudioManager.instance.StopMusic("BGM_Alternate");
 		  AudioManager.instance.PlaySFX("BlueScreen");
-		  SceneManager.LoadScene(2);
+		  SceneManager.LoadScene(3);
     }
  
     // Glitches and some chromatic aberration
@@ -264,7 +264,7 @@ private bool started_game;
 	if(Input.GetKeyDown(KeyCode.F8)) {
       game_state = GameState.MainMenu;
 	    AudioManager.PlayMusic ("BGM");
-      SceneManager.LoadScene(0);
+      SceneManager.LoadScene(1);
       Restart();
     }
   }
