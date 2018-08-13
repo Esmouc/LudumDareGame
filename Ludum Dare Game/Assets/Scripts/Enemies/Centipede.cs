@@ -25,6 +25,7 @@ public class Centipede : Enemy {
     random_target = new Vector3(0.0f, 0.0f, Random.Range(-45.0f, 45.0f));
 
     if(head) {
+      GameManager.instance.AudioManager.PlaySFX("CentipedeSpawn");
       head = false;
       GameObject go_body = null;
       GameObject previous_go = gameObject;

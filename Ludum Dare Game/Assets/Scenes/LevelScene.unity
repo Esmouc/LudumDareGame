@@ -887,6 +887,7 @@ MonoBehaviour:
   - {fileID: 1307415392733454, guid: ff64e578d2fa28d49835f9b8b8dd8e9b, type: 2}
   - {fileID: 1322297339352280, guid: 64cc962dfac77cc4d96df196ff39f3d9, type: 2}
   - {fileID: 1486454697530324, guid: df22b61c39db630439a5b0f195f864c2, type: 2}
+  - {fileID: 1801454976495748, guid: cb7fe0ff8e277cf49b4d2bc411c70a05, type: 2}
   - {fileID: 1988928330513390, guid: a1c02260ab92a2c44986f3848926a997, type: 2}
   - {fileID: 1801454976495748, guid: 783bae4ffdc98484a86a4759902722f1, type: 2}
   EliminationBox: {fileID: 1046922013580710, guid: 1c0f9779f6a0df040908d96a9c5990f1,
@@ -1374,7 +1375,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -121.8, y: -13.7}
+  m_AnchoredPosition: {x: -121.79999, y: -13.700012}
   m_SizeDelta: {x: 2308.27, y: 313.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1763300088

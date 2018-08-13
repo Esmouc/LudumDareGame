@@ -52,7 +52,7 @@ public class MenuController : MonoBehaviour
 
 		if (Input.GetKey ("joystick button 0") || Input.GetKey ("joystick button 2") || Input.GetKey ("joystick button 3")) {
 			GameManager.instance.mouse_visibility = false;
-
+      GameManager.instance.AudioManager.PlaySFX("ButtonSelect"); 
 			if (!tutorialSelected) {
 				if (!selected)
 					GameManager.instance.StartGame ();

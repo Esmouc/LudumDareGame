@@ -20,7 +20,7 @@ public class LevelManager : MonoBehaviour {
 
     windowChance = 100000;
 		dataPieceChance = 200;
-		enemyChance = 150;
+		enemyChance = 140;
 		minEnemyDifficulty = 0;
 		maxEnemyDifficulty = Enemies.Length/2;
 
@@ -72,7 +72,12 @@ public class LevelManager : MonoBehaviour {
 					maxEnemyDifficulty++;
 				}
 
-				if (enemyChance == 70){
+				if (enemyChance == 90){
+					//minEnemyDifficulty++;
+					maxEnemyDifficulty++;
+				}
+
+        if (enemyChance == 70){
 					//minEnemyDifficulty++;
 					maxEnemyDifficulty++;
 				}

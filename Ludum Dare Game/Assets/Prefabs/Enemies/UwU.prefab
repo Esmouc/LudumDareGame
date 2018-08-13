@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 114170293617054110}
   - component: {fileID: 95711091601317368}
   m_Layer: 0
-  m_Name: OwO
+  m_Name: UwU
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,7 +128,7 @@ MonoBehaviour:
   score: 100
   corruptionLevel: 0.2
   speed: 1.5
-  number_of_bodies: 12
+  number_of_bodies: 4
   rotation_velocity: 50
   angle_factor: 10
   current_angle: 0

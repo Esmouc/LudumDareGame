@@ -213,7 +213,7 @@ private bool started_game;
     bloom_set.bloom.intensity = (corruption_level / corruption_limit) * 1.25f;
     camera_effects.bloom.settings = bloom_set;
 
-    if((corruption_level / corruption_limit) > 0.75f && changed_music == false) {
+    if((corruption_level / corruption_limit) > 0.6f && changed_music == false) {
       AudioManager.instance.StopMusic("BGM");
       AudioManager.instance.PlayMusic("BGM_Alternate");
       changed_music = true;

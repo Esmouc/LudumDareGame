@@ -74,7 +74,7 @@ MonoBehaviour:
   - sfxName: Explosion
     sfxClip: {fileID: 8300000, guid: de79cef44887115498c2b4c8f05a49c1, type: 3}
     sfxEnable: 1
-    sfxVolume: 0.5
+    sfxVolume: 0.3
     sfxPitch: 1
     sfxRandomVolume: 0
     sfxRandomPitch: 0.1
@@ -90,7 +90,7 @@ MonoBehaviour:
   - sfxName: ButtonSelect
     sfxClip: {fileID: 8300000, guid: 82ae9d26cce901b40a40a8d85ef16c72, type: 3}
     sfxEnable: 1
-    sfxVolume: 1
+    sfxVolume: 0.75
     sfxPitch: 1
     sfxRandomVolume: 0
     sfxRandomPitch: 0
@@ -98,15 +98,15 @@ MonoBehaviour:
   - sfxName: EnemyShot
     sfxClip: {fileID: 8300000, guid: 36dce86dfe799b842a294235cd9f029f, type: 3}
     sfxEnable: 1
-    sfxVolume: 1
+    sfxVolume: 0.15
     sfxPitch: 1
     sfxRandomVolume: 0
-    sfxRandomPitch: 0
+    sfxRandomPitch: 0.1
     sfxLoop: 0
-  - sfxName: Glitch1
+  - sfxName: Glitch
     sfxClip: {fileID: 8300000, guid: ee5c2041fe5a26247829b0e0a6f39e04, type: 3}
     sfxEnable: 1
-    sfxVolume: 1
+    sfxVolume: 0.5
     sfxPitch: 1
     sfxRandomVolume: 0
     sfxRandomPitch: 0
@@ -122,15 +122,15 @@ MonoBehaviour:
   - sfxName: PlayerShot
     sfxClip: {fileID: 8300000, guid: adb417e757bf37e44a797b89a9435b20, type: 3}
     sfxEnable: 1
-    sfxVolume: 1
+    sfxVolume: 0.25
     sfxPitch: 1
     sfxRandomVolume: 0
-    sfxRandomPitch: 0
+    sfxRandomPitch: 0.2
     sfxLoop: 0
   - sfxName: TrojanBlink
     sfxClip: {fileID: 8300000, guid: f8f25281ce7e2154ba40b869aad62b87, type: 3}
     sfxEnable: 1
-    sfxVolume: 1
+    sfxVolume: 0.75
     sfxPitch: 1
     sfxRandomVolume: 0
     sfxRandomPitch: 0
@@ -138,7 +138,7 @@ MonoBehaviour:
   - sfxName: SubdividedVirus
     sfxClip: {fileID: 8300000, guid: 06fd6bcc519bfbe44bd47d89142fb28c, type: 3}
     sfxEnable: 1
-    sfxVolume: 1
+    sfxVolume: 0.75
     sfxPitch: 1
     sfxRandomVolume: 0
     sfxRandomPitch: 0

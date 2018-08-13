@@ -22,11 +22,13 @@ public class Menu : MonoBehaviour {
 
   void ExitGame()
   {
+    GameManager.instance.AudioManager.PlaySFX("ButtonSelect"); 
     GameManager.instance.ExitGame();
   }
 
   void ContinueGame()
   {
+    GameManager.instance.AudioManager.PlaySFX("ButtonSelect"); 
     GameManager.instance.ContinueGame();
   }
 }
