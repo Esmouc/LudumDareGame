@@ -10,16 +10,19 @@ public class BlueScreenScript : MonoBehaviour {
 
 	public Text[] userNames, userScores;
 
-	public Text playerScore, playerPosition;
+	public Text playerHiScore, playerPosition, playerCurrentScore;
 
 	public InputField playerUserName;
+
+	private bool hiScore = true;
 
 	// Use this for initialization
 	void Start () {
 
 		playerUserName.Select ();
-		playerScore.text = GameManager.instance.score.ToString();
-		PostScore (Convert.ToInt32(playerScore.text));
+		playerHiScore.text = GameManager.instance.score.ToString();
+		playerCurrentScore.text = GameManager.instance.score.ToString();
+		PostScore (Convert.ToInt32(playerHiScore.text));
 
 		RefreshLeaderboard ();
 
@@ -27,8 +30,10 @@ public class BlueScreenScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.F8)){
-			PostUserName (playerUserName.text);
+		if (hiScore){
+			if (Input.GetKeyDown (KeyCode.F8)){
+				PostUserName (playerUserName.text);
+			}
 		}
 	}
 
@@ -50,7 +55,7 @@ public class BlueScreenScript : MonoBehaviour {
 			error => { Debug.LogError(error.GenerateErrorReport()); });
 	}	
 
-	public void GetPlayerPosition(){
+	public void GetPlayerPosition(int Score){
 		PlayFabClientAPI.GetLeaderboardAroundPlayer( new PlayFab.ClientModels.GetLeaderboardAroundPlayerRequest {
 			// request.Statistics is a list, so multiple StatisticUpdate objects can be defined if required.
 			MaxResultsCount = 1,
@@ -58,6 +63,12 @@ public class BlueScreenScript : MonoBehaviour {
 		},
 			result => { Debug.Log("User statistics updated");
 				playerPosition.text = (result.Leaderboard[0].Position+1).ToString() + ".";
+				if (result.Leaderboard[0].StatValue > Score){
+					playerHiScore.text = result.Leaderboard[0].StatValue.ToString();
+					playerUserName.text = result.Leaderboard[0].DisplayName;
+					playerUserName.interactable = false;
+					hiScore = false;
+				}
 			},
 			error => { Debug.LogError(error.GenerateErrorReport()); });
 	}
@@ -71,7 +82,7 @@ public class BlueScreenScript : MonoBehaviour {
 			}
 		},
 			result => { Debug.Log("User statistics updated");
-				GetPlayerPosition();},
+				GetPlayerPosition(Score);},
 			error => { Debug.LogError(error.GenerateErrorReport()); });
 	}
 
