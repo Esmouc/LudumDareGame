@@ -277,7 +277,7 @@ MonoBehaviour:
   score: 0
   corruptionLevel: 1
   speed: 120
-  rotation_velocity: 5
+  rotation_velocity: 220
   CanDivide: 0
   subViruses: {fileID: 0}
 --- !u!114 &114398948821655378
@@ -295,7 +295,7 @@ MonoBehaviour:
   score: 0
   corruptionLevel: 1
   speed: 120
-  rotation_velocity: 5
+  rotation_velocity: 220
   CanDivide: 0
   subViruses: {fileID: 0}
 --- !u!114 &114478659148638448
@@ -311,9 +311,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 2
   score: 150
-  corruptionLevel: 3
+  corruptionLevel: 4
   speed: 80
-  rotation_velocity: 2
+  rotation_velocity: 120
   CanDivide: 1
   subViruses: {fileID: 1767613346546534}
 --- !u!212 &212043444599333572
