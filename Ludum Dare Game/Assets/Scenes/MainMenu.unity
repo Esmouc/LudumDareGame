@@ -212,6 +212,11 @@ Prefab:
       propertyPath: sfxs.Array.data[0].sfxRandomPitch
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 114018202085104582, guid: b3d51577726a7974ebe675c9b4299c85,
+        type: 2}
+      propertyPath: corruption_limit
+      value: 300
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d51577726a7974ebe675c9b4299c85, type: 2}
   m_IsPrefabAsset: 0

@@ -71,13 +71,13 @@ MonoBehaviour:
     musicRandomPitch: 0.25
     musicLoop: 1
   sfxs:
-  - sfxName: 
-    sfxClip: {fileID: 0}
-    sfxEnable: 0
-    sfxVolume: 0
-    sfxPitch: 0.5
+  - sfxName: Explosion
+    sfxClip: {fileID: 8300000, guid: de79cef44887115498c2b4c8f05a49c1, type: 3}
+    sfxEnable: 1
+    sfxVolume: 0.5
+    sfxPitch: 1
     sfxRandomVolume: 0
-    sfxRandomPitch: 0
+    sfxRandomPitch: 0.1
     sfxLoop: 0
   - sfxName: BlueScreen
     sfxClip: {fileID: 8300000, guid: 07b02bb0f127ecf4d9ad697ba3082d68, type: 3}
@@ -157,7 +157,7 @@ MonoBehaviour:
   AudioManager: {fileID: 0}
   game_state: 0
   corruption_level: 0
-  corruption_limit: 20
+  corruption_limit: 300
   corrupted_data: 0
   mouse_visibility: 0
   chance_of_glitching: 0
