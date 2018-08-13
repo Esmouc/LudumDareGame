@@ -15,6 +15,13 @@ public class PlayFabScript : MonoBehaviour {
 
 	}
 
+	void Update () {
+
+		//if (Input.GetKeyDown (KeyCode.A))
+		//	PlayerPrefs.DeleteAll ();
+
+	}
+
 	private void CustomSignIn() {
 
 		PlayFabClientAPI.LoginWithCustomID(new PlayFab.ClientModels.LoginWithCustomIDRequest
