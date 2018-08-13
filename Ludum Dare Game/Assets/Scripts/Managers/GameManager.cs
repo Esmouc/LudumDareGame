@@ -263,7 +263,6 @@ private bool started_game;
   {
 	if(Input.GetKeyDown(KeyCode.F8)) {
       game_state = GameState.MainMenu;
-	    AudioManager.PlayMusic ("BGM");
       SceneManager.LoadScene(1);
       Restart();
     }

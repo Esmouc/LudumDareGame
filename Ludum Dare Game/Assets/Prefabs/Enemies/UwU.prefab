@@ -128,7 +128,7 @@ MonoBehaviour:
   score: 100
   corruptionLevel: 0.2
   speed: 1.5
-  number_of_bodies: 4
+  number_of_bodies: 2
   rotation_velocity: 50
   angle_factor: 10
   current_angle: 0
